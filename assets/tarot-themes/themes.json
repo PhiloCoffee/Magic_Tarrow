@@ -11,6 +11,7 @@
       "label": "PhiloCoffee",
       "description": "Coffee, philosophy, and salon-themed Major Arcana artwork.",
       "basePath": "assets/tarot-themes/philocoffee/cards",
+      "imageFit": "cover",
       "manifest": "assets/tarot-themes/philocoffee/manifest.json",
       "cards": {
         "the-fool": "00-the-fool.png",
@@ -35,14 +36,14 @@
         "the-sun": "19-the-sun.png",
         "judgement": "20-judgement.png",
         "the-world": "21-the-world.png"
-      },
-      "missing": ["the-hierophant"]
+      }
     },
     {
       "id": "rider-waite-smith",
       "label": "Classic RWS",
       "description": "Public-domain Rider-Waite-Smith Major Arcana images from Wikimedia Commons.",
       "basePath": "assets/tarot-themes/rider-waite-smith/cards",
+      "imageFit": "contain",
       "manifest": "assets/tarot-themes/rider-waite-smith/manifest.json",
       "cards": {
         "the-fool": "00-the-fool.jpg",

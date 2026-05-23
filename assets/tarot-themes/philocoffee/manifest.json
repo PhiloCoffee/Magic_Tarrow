@@ -3,6 +3,7 @@
   "label": "PhiloCoffee",
   "description": "Coffee, philosophy, and salon-themed Major Arcana artwork.",
   "basePath": "assets/tarot-themes/philocoffee/cards",
+  "imageFit": "cover",
   "variantPath": "assets/tarot-themes/philocoffee/variants",
   "cards": {
     "the-fool": "00-the-fool.png",
@@ -37,6 +38,5 @@
     "the-tower": "16-the-tower-variant-knowledge-chaos.png",
     "judgement": "20-judgement-variant-ghostwriter-export.png",
     "the-world": "21-the-world-variant-ghostwriter-export.png"
-  },
-  "missing": ["the-hierophant"]
+  }
 }

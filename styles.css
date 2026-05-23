@@ -214,36 +214,6 @@ textarea:focus {
   transform: translateY(-1px);
 }
 
-.session-meta {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: auto;
-}
-
-.session-meta div {
-  min-width: 0;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 12px;
-  background: #f7efe4;
-}
-
-.session-meta strong,
-.session-meta span {
-  display: block;
-}
-
-.session-meta strong {
-  color: var(--coffee);
-  font-size: 1.2rem;
-}
-
-.session-meta span {
-  color: var(--muted);
-  font-size: 0.75rem;
-}
-
 .reading-surface {
   display: grid;
   grid-template-rows: auto minmax(280px, 1fr) auto auto;
@@ -336,11 +306,23 @@ textarea:focus {
   opacity: 1;
 }
 
+.card-front[data-fit="contain"] {
+  background: #f3eadb;
+}
+
+.card-front[data-fit="contain"] .card-art {
+  object-fit: contain;
+}
+
 .card-front.has-art .card-index,
 .card-front.has-art .card-glyph,
 .card-front.has-art .card-name,
 .card-front.has-art .card-keyword {
   display: none;
+}
+
+.tarot-card.is-reversed .card-front {
+  transform: rotateY(180deg) rotate(180deg);
 }
 
 .tarot-card.is-revealed .card-back {
@@ -349,6 +331,10 @@ textarea:focus {
 
 .tarot-card.is-revealed .card-front {
   transform: rotateY(360deg);
+}
+
+.tarot-card.is-revealed.is-reversed .card-front {
+  transform: rotateY(360deg) rotate(180deg);
 }
 
 .card-orbit {

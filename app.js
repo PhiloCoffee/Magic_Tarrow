@@ -85,11 +85,37 @@ const zhCards = {
   "the-world": ["世界", "圆满", "把洞见交还给共同体，完成这一次循环。"]
 };
 
+const itCards = {
+  "the-fool": ["Il Matto", "coppa dell'inizio", "Parti con sincerita prima di cercare competenza."],
+  "the-magician": ["Il Mago", "strumenti sul tavolo", "Trasforma chicchi, domande e persone in un rito che funziona."],
+  "the-high-priestess": ["La Papessa", "ascolto quieto", "Lascia parlare prima cio che nella stanza non e ancora stato detto."],
+  "the-empress": ["L'Imperatrice", "ospitalita calda", "Rendi l'incontro abbastanza generoso da accogliere voci nuove."],
+  "the-emperor": ["L'Imperatore", "struttura", "Dai al salotto una cornice, cosi la liberta puo restare dentro."],
+  "the-hierophant": ["Il Papa", "tradizione", "Prendi in prestito domande antiche senza restarne prigioniero."],
+  "the-lovers": ["Gli Amanti", "scelta", "Scegli una miscela che conservi insieme gusto e verita."],
+  "the-chariot": ["Il Carro", "slancio", "Porta la conversazione verso un'azione visibile del club."],
+  "strength": ["La Forza", "forza gentile", "Esercita coraggio senza indurire la stanza."],
+  "the-hermit": ["L'Eremita", "origine singola", "Una tazza tranquilla puo rivelare cio che il gruppo non ha visto."],
+  "wheel-of-fortune": ["La Ruota", "cambiamento", "Anche la prossima sorpresa puo diventare materiale di dialogo."],
+  "justice": ["La Giustizia", "misura equa", "Chiedi chi trae beneficio dall'interpretazione presente."],
+  "the-hanged-one": ["L'Appeso", "pausa", "Capovolgi la risposta ovvia e assaggiala di nuovo."],
+  "death": ["La Morte", "rilascio", "Lascia finire una forma stanca, per fare spazio a un rito migliore."],
+  "temperance": ["La Temperanza", "miscela", "Bilancia intensita e cura, teoria e vita quotidiana."],
+  "the-devil": ["Il Diavolo", "attaccamento", "Nomina l'abitudine che fa girare il club in cerchio."],
+  "the-tower": ["La Torre", "rottura", "Quando il piano si incrina, usa con onesta quell'apertura."],
+  "the-star": ["La Stella", "speranza", "Tieni sul tavolo una speranza concreta."],
+  "the-moon": ["La Luna", "ambiguita", "Non forzare il mistero dentro una conclusione ordinata."],
+  "the-sun": ["Il Sole", "chiarezza", "Condividi l'intuizione in modo abbastanza chiaro da invitare altri."],
+  "judgement": ["Il Giudizio", "chiamata", "Ascolta la domanda che il club sta diventando."],
+  "the-world": ["Il Mondo", "cerchio", "Chiudi la sessione restituendo l'intuizione alla comunita."]
+};
+
 const defaultThemes = [
   {
     id: "symbolic",
     label: "Symbolic",
     labelZh: "符号",
+    labelIt: "Simbolico",
     description: "Built-in lightweight symbolic card faces.",
     type: "fallback",
     cards: {}
@@ -98,17 +124,20 @@ const defaultThemes = [
     id: "philocoffee",
     label: "PhiloCoffee",
     labelZh: "哲咖",
+    labelIt: "PhiloCoffee",
     description: "Coffee, philosophy, and salon-themed Major Arcana artwork.",
     basePath: "assets/tarot-themes/philocoffee/cards",
-    cards: Object.fromEntries(cardDefinitions.map((card) => [card.key, card.defaultFile])),
-    missing: ["the-hierophant"]
+    imageFit: "cover",
+    cards: Object.fromEntries(cardDefinitions.map((card) => [card.key, card.defaultFile]))
   },
   {
     id: "rider-waite-smith",
     label: "Classic RWS",
     labelZh: "经典 RWS",
+    labelIt: "RWS classico",
     description: "Public-domain Rider-Waite-Smith Major Arcana images from Wikimedia Commons.",
     basePath: "assets/tarot-themes/rider-waite-smith/cards",
+    imageFit: "contain",
     cards: Object.fromEntries(
       cardDefinitions.map((card) => [card.key, card.defaultFile.replace(".png", ".jpg")])
     )
@@ -117,6 +146,7 @@ const defaultThemes = [
 
 const translations = {
   en: {
+    appTitle: "Tarot Studio",
     questionLabel: "Question for the table",
     questionPlaceholder: "What should our club notice before the next gathering?",
     toneLabel: "Session flavor",
@@ -138,6 +168,12 @@ const translations = {
     emptyQuestion: "What should PhiloCoffee notice before the next gathering?",
     readingIntro: "For this PhiloCoffee question",
     spreadSays: "the spread says",
+    upright: "upright",
+    reversed: "reversed",
+    orientationAdvice: {
+      upright: "Read this as a direct invitation.",
+      reversed: "Read this as a blocked, delayed, or inward-facing version of the card."
+    },
     openWith: "Let {first} open the room and let {last} decide the closing action.",
     singleAgora: "Let {card} become one question everyone answers in a single sentence.",
     coffee: "Brew one cup slowly, then let each person name the flavor of the idea before debating it.",
@@ -171,6 +207,7 @@ const translations = {
     }
   },
   zh: {
+    appTitle: "\u5854\u7f57\u5de5\u4f5c\u53f0",
     questionLabel: "\u684c\u9762\u95ee\u9898",
     questionPlaceholder: "\u4e0b\u4e00\u6b21\u54f2\u5496\u805a\u4f1a\u524d\uff0c\u6211\u4eec\u5e94\u8be5\u5148\u770b\u89c1\u4ec0\u4e48\uff1f",
     toneLabel: "\u4f1a\u8bdd\u98ce\u5473",
@@ -192,6 +229,12 @@ const translations = {
     emptyQuestion: "\u4e0b\u4e00\u6b21\u54f2\u5496\u805a\u4f1a\u524d\uff0c\u6211\u4eec\u5e94\u8be5\u5148\u770b\u89c1\u4ec0\u4e48\uff1f",
     readingIntro: "\u56f4\u7ed5\u8fd9\u4e2a\u54f2\u5496\u95ee\u9898",
     spreadSays: "\u724c\u9635\u63d0\u793a",
+    upright: "\u6b63\u4f4d",
+    reversed: "\u9006\u4f4d",
+    orientationAdvice: {
+      upright: "\u8fd9\u5f20\u724c\u4ee5\u76f4\u63a5\u7684\u9080\u8bf7\u51fa\u73b0\u3002",
+      reversed: "\u8fd9\u5f20\u724c\u63d0\u793a\u88ab\u963b\u6ede\u3001\u5ef6\u8fdf\u6216\u8f6c\u5411\u5185\u5728\u7684\u7248\u672c\u3002"
+    },
     openWith: "\u8ba9\u300c{first}\u300d\u6253\u5f00\u8fd9\u4e2a\u623f\u95f4\uff0c\u518d\u8ba9\u300c{last}\u300d\u51b3\u5b9a\u6536\u675f\u65f6\u7684\u884c\u52a8\u3002",
     singleAgora: "\u8ba9\u300c{card}\u300d\u53d8\u6210\u4e00\u4e2a\u6bcf\u4e2a\u4eba\u7528\u4e00\u53e5\u8bdd\u56de\u7b54\u7684\u95ee\u9898\u3002",
     coffee: "\u6162\u6162\u51b2\u4e00\u676f\u5496\u5561\uff0c\u8ba9\u6bcf\u4e2a\u4eba\u5148\u8bf4\u51fa\u8fd9\u4e2a\u60f3\u6cd5\u7684\u98ce\u5473\uff0c\u518d\u5f00\u59cb\u8fa9\u8bba\u3002",
@@ -223,6 +266,67 @@ const translations = {
       notes: "\u793e\u56e2\u7b14\u8bb0",
       none: "\u65e0"
     }
+  },
+  it: {
+    appTitle: "Studio dei Tarocchi",
+    questionLabel: "Domanda per il tavolo",
+    questionPlaceholder: "Che cosa dovrebbe notare PhiloCoffee prima del prossimo incontro?",
+    toneLabel: "Tono della sessione",
+    spreadLabel: "Stesa",
+    themeLabel: "Tema del mazzo",
+    importTheme: "Importa tema",
+    drawCards: "Pesca carte",
+    reset: "Azzera",
+    heroEyebrow: "Dove il caffe incontra la filosofia",
+    heroTitle: "Trasforma una domanda del club in un rito condiviso.",
+    readingLabel: "Lettura",
+    brewLabel: "Spunto di infusione",
+    agoraLabel: "Nota dell'agora",
+    notesLabel: "Note del club",
+    notesPlaceholder: "Annota una citazione, un'azione o una domanda per il prossimo salotto.",
+    initialReading: "Scrivi una domanda, scegli una stesa e pesca. Lo studio colleghera immagini dei tarocchi, caffe, filosofia e una piccola azione per il prossimo incontro PhiloCoffee.",
+    initialBrew: "Una buona sessione comincia con una tazza condivisa e una domanda onesta.",
+    initialAgora: "Lascia spazio al disaccordo; spesso la conversazione si sveglia proprio li.",
+    emptyQuestion: "Che cosa dovrebbe notare PhiloCoffee prima del prossimo incontro?",
+    readingIntro: "Per questa domanda PhiloCoffee",
+    spreadSays: "la stesa suggerisce",
+    upright: "diritta",
+    reversed: "rovesciata",
+    orientationAdvice: {
+      upright: "Leggila come un invito diretto.",
+      reversed: "Leggila come una versione bloccata, ritardata o rivolta verso l'interno della carta."
+    },
+    openWith: "Lascia che {first} apra la stanza e che {last} decida l'azione di chiusura.",
+    singleAgora: "Lascia che {card} diventi una domanda a cui ognuno risponde in una frase.",
+    coffee: "Prepara una tazza lentamente, poi lascia che ognuno nomini il sapore dell'idea prima di discuterla.",
+    philosophy: "Chiedi: quale presupposto beviamo cosi spesso da non sentirne piu il gusto?",
+    community: "Concludi con un facilitatore, un invito e un piccolo esperimento per il prossimo incontro.",
+    future: "Scrivi il prossimo poster come una domanda, non come uno slogan; lascia che la curiosita recluti.",
+    copied: "Riepilogo copiato",
+    copy: "Copia riepilogo",
+    toneLabels: {
+      Coffee: "Caffe",
+      Philosophy: "Filosofia",
+      Community: "Comunita",
+      Future: "Futuro"
+    },
+    spreadLabels: {
+      1: ["Segnale"],
+      3: ["Tazza", "Domanda", "Azione"],
+      5: ["Base", "Tensione", "Intuizione", "Pratica", "Prossimo"]
+    },
+    summaryLabels: {
+      title: "Studio Tarocchi PhiloCoffee",
+      theme: "Tema",
+      question: "Domanda",
+      cards: "Carte",
+      noCards: "Nessuna carta pescata",
+      reading: "Lettura",
+      brew: "Spunto di infusione",
+      agora: "Nota dell'agora",
+      notes: "Note del club",
+      none: "Nessuna"
+    }
   }
 };
 
@@ -237,6 +341,7 @@ let currentThemeId = "philocoffee";
 let currentTone = "Coffee";
 let currentSpread = 1;
 let language = "en";
+const languageOrder = ["en", "zh", "it"];
 let activeCards = [];
 
 const cardsStage = document.querySelector("#cardsStage");
@@ -260,9 +365,11 @@ function normalizeTheme(theme) {
     id: theme.id || `theme-${Date.now()}`,
     label: theme.label || theme.name || "Imported",
     labelZh: theme.labelZh || theme.label_zh || "",
+    labelIt: theme.labelIt || theme.label_it || "",
     description: theme.description || "",
     type: theme.type || "image",
     basePath: theme.basePath || "",
+    imageFit: theme.imageFit === "contain" ? "contain" : "cover",
     cards: { ...cardFilesFromArray, ...cards },
     missing: theme.missing || []
   };
@@ -293,6 +400,12 @@ function themeLabel(theme) {
     if (theme.id === "philocoffee") return "\u54f2\u5496";
     if (theme.id === "rider-waite-smith") return "\u7ecf\u5178 RWS";
   }
+  if (language === "it") {
+    if (theme.labelIt) return theme.labelIt;
+    if (theme.id === "symbolic") return "Simbolico";
+    if (theme.id === "philocoffee") return "PhiloCoffee";
+    if (theme.id === "rider-waite-smith") return "RWS classico";
+  }
   return theme.label;
 }
 
@@ -303,6 +416,14 @@ function cardText(card) {
       name: zh[0],
       keyword: zh[1],
       meaning: zh[2]
+    };
+  }
+  const it = itCards[card.key];
+  if (language === "it" && it) {
+    return {
+      name: it[0],
+      keyword: it[1],
+      meaning: it[2]
     };
   }
   return {
@@ -347,7 +468,12 @@ function renderThemeOptions() {
 
 function applyLanguage() {
   const text = translations[language];
-  document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
+  const htmlLang = {
+    en: "en",
+    zh: "zh-CN",
+    it: "it"
+  };
+  document.documentElement.lang = htmlLang[language] || "en";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
@@ -358,6 +484,7 @@ function applyLanguage() {
 
   questionInput.placeholder = text.questionPlaceholder;
   notesInput.placeholder = text.notesPlaceholder;
+  document.querySelector("#languageToggle").textContent = "EN / 中文 / IT";
   copySummary.textContent = text.copy;
   document.querySelector("#resetSession").setAttribute("aria-label", text.reset);
   document.querySelector("#themeOptions").setAttribute("aria-label", text.themeLabel);
@@ -372,7 +499,13 @@ function applyLanguage() {
 }
 
 function sampleDeck(count) {
-  return [...cardDefinitions].sort(() => Math.random() - 0.5).slice(0, count);
+  return [...cardDefinitions]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, count)
+    .map((card) => ({
+      ...card,
+      orientation: Math.random() > 0.5 ? "upright" : "reversed"
+    }));
 }
 
 function setActiveButton(buttons, activeButton) {
@@ -390,7 +523,11 @@ function renderCards(cards) {
     const front = node.querySelector(".card-front");
     const art = node.querySelector(".card-art");
     const image = imageForCard(card);
+    const isReversed = card.orientation === "reversed";
+    const fit = selectedTheme().imageFit === "contain" ? "contain" : "cover";
 
+    node.classList.toggle("is-reversed", isReversed);
+    front.dataset.fit = fit;
     node.querySelector(".card-index").textContent = `${String(card.index).padStart(2, "0")} - ${labels[position]}`;
     node.querySelector(".card-glyph").textContent = card.glyph;
     node.querySelector(".card-name").textContent = localized.name;
@@ -420,10 +557,17 @@ function buildReading(cards) {
     .map((card, index) => {
       const localized = cardText(card);
       const labels = text.spreadLabels[currentSpread] || spreadLabels[currentSpread];
-      return `${labels[index]}: ${localized.name} (${localized.keyword})`;
+      const orientation = text[card.orientation] || text.upright;
+      return `${labels[index]}: ${localized.name} ${orientation} (${localized.keyword})`;
     })
     .join("; ");
-  const meanings = cards.map((card) => cardText(card).meaning).join(" ");
+  const meanings = cards
+    .map((card) => {
+      const localized = cardText(card);
+      const advice = text.orientationAdvice[card.orientation] || text.orientationAdvice.upright;
+      return `${localized.meaning} ${advice}`;
+    })
+    .join(" ");
   const first = cardText(cards[0]);
   const last = cardText(cards[cards.length - 1]);
 
@@ -457,7 +601,8 @@ function currentSummary() {
   const text = translations[language].summaryLabels;
   const cards = activeCards.map((card) => {
     const localized = cardText(card);
-    return `${localized.name} - ${localized.keyword}`;
+    const orientation = translations[language][card.orientation] || translations[language].upright;
+    return `${localized.name} ${orientation} - ${localized.keyword}`;
   }).join(", ");
   return [
     text.title,
@@ -503,7 +648,8 @@ document.querySelectorAll("[data-spread]").forEach((button) => {
 document.querySelector("#drawCards").addEventListener("click", drawCards);
 document.querySelector("#resetSession").addEventListener("click", resetSession);
 document.querySelector("#languageToggle").addEventListener("click", () => {
-  language = language === "en" ? "zh" : "en";
+  const nextIndex = (languageOrder.indexOf(language) + 1) % languageOrder.length;
+  language = languageOrder[nextIndex];
   applyLanguage();
   if (activeCards.length) {
     renderCards(activeCards);

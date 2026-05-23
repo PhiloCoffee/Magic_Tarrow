@@ -5,6 +5,7 @@
   "source": "https://commons.wikimedia.org/wiki/Category:Rider-Waite_tarot_deck",
   "license": "Public domain; verify local jurisdiction before redistribution.",
   "basePath": "assets/tarot-themes/rider-waite-smith/cards",
+  "imageFit": "contain",
   "cards": {
     "the-fool": "00-the-fool.jpg",
     "the-magician": "01-the-magician.jpg",
