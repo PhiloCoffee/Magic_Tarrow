@@ -1,19 +1,37 @@
 # Magic_Tarrow
-maybe this repo can bring some luck to our club...
+
+Maybe this repo can bring some luck to our club.
 
 ## PhiloCoffee Tarot Studio
 
-This repo now includes a dependency-free interactive website for PhiloCoffee Club:
+This repo includes a dependency-free interactive website for PhiloCoffee Club:
 
 - asks a club question
 - draws 1, 3, or 5 tarot-inspired cards
+- randomly reads cards as upright or reversed
 - connects the spread to coffee, philosophy, and community action
-- supports quick English / 中文 reading prompts
+- supports English, Chinese, and Italian
+- supports light, dark, and system display modes
+- uses responsive PhiloCoffee background art with translucent interface panels
 - copies a session summary for club notes
 
 Open `index.html` directly in a browser, or host the folder with GitHub Pages.
 
-### Phone preview on local Wi-Fi
+## Local Preview
+
+For desktop development, serve the folder with any static server. One quick option:
+
+```powershell
+python -m http.server 4173
+```
+
+Then open:
+
+```text
+http://localhost:4173/
+```
+
+## Phone Preview On Local Wi-Fi
 
 For quick phone testing, connect the phone and computer to the same Wi-Fi, then run:
 
@@ -21,19 +39,51 @@ For quick phone testing, connect the phone and computer to the same Wi-Fi, then 
 .\serve-mobile.ps1
 ```
 
-The script prints one or more LAN URLs like `http://192.168.x.x:4173/index.html`.
+The script prints one or more LAN URLs like:
+
+```text
+http://192.168.x.x:4173/index.html
+```
+
 Open that URL in the phone browser. To use another port:
 
 ```powershell
 .\serve-mobile.ps1 8080
 ```
 
-Responsive light/night backgrounds live in `assets/backgrounds/philocoffee/`.
-Desktop uses the wide images; mobile uses the portrait images. Dark mode uses the night set.
+## Background And Display Modes
 
-### Tarot artwork themes
+Responsive light/night backgrounds live in:
 
-Tarot image themes live under `assets/tarot-themes/`.
+```text
+assets/backgrounds/philocoffee/
+```
+
+Desktop uses the wide images. Mobile uses the portrait images. Dark mode uses the night set.
+
+The page background is composed in `styles.css` as:
+
+1. a soft readability wash
+2. the selected background artwork
+3. the fallback page gradient
+
+The main workspace, sidebar, inputs, and reading cards use translucent panel colors so the PhiloCoffee paper texture remains visible behind the UI. Tune these CSS variables:
+
+- `--workspace-bg`
+- `--panel-bg`
+- `--section`
+- `--field`
+- `--background-wash`
+
+The theme toggle cycles between system, light, and dark modes.
+
+## Tarot Artwork Themes
+
+Tarot image themes live under:
+
+```text
+assets/tarot-themes/
+```
 
 - `assets/tarot-themes/themes.json` controls the theme buttons shown in the app.
 - `assets/tarot-themes/<theme-id>/manifest.json` documents one theme.
@@ -42,17 +92,27 @@ Tarot image themes live under `assets/tarot-themes/`.
 
 The current PhiloCoffee image set was unpacked into:
 
-`assets/tarot-themes/philocoffee/cards/`
+```text
+assets/tarot-themes/philocoffee/cards/
+```
 
 A classic Rider-Waite-Smith comparison set was downloaded from Wikimedia Commons into:
 
-`assets/tarot-themes/rider-waite-smith/cards/`
+```text
+assets/tarot-themes/rider-waite-smith/cards/
+```
 
-Source: `https://commons.wikimedia.org/wiki/Category:Rider-Waite_tarot_deck`
+Source:
+
+```text
+https://commons.wikimedia.org/wiki/Category:Rider-Waite_tarot_deck
+```
 
 The 22-card `gpt-image-2` prompt batch lives at:
 
-`tmp/imagegen/philocoffee_tarot_prompts.jsonl`
+```text
+tmp/imagegen/philocoffee_tarot_prompts.jsonl
+```
 
 After setting `OPENAI_API_KEY`, generate the full deck:
 
@@ -62,14 +122,14 @@ python C:\Users\everl\.codex\skills\.system\imagegen\scripts\image_gen.py genera
 
 The web app automatically uses matching card images from the selected theme. If a card image is missing, it falls back to the built-in symbolic card face.
 
-## 相关产品：
-1. 具有心理洞察力的塔罗牌解读专家:
-- [塔罗之镜](https://chatgpt.com/g/g-h2ooZocKJ-ta-luo-zhi-jing)
-- 这是一个OpenAI社区的GPTs， 由@Tony 建立，实战在社团文化节辅助机器占卜中
-- 
+## Related Inspiration
 
-## TODO :
-- [ ] 实现简单的toy project
-- [ ] 考虑自动发牌程序
-- [ ] 可视化？
-- [ ] more agentic action
+- Tarot Mirror: https://chatgpt.com/g/g-h2ooZocKJ-ta-luo-zhi-jing
+- A community GPT created by Tony, previously used as an assisted tarot-reading tool in club cultural activities.
+
+## TODO
+
+- [ ] Build more playful drawing rituals.
+- [ ] Explore automatic card dealing animations.
+- [ ] Add more visualization modes.
+- [ ] Add more agentic follow-up actions.

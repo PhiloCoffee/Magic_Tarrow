@@ -7,10 +7,10 @@
   --paper: #f8f5ef;
   --panel: #fffdf8;
   --line: #ddd6ca;
-  --field: #fffaf1;
-  --section: rgba(255, 253, 248, 0.86);
-  --workspace-bg: rgba(255, 253, 248, 0.76);
-  --panel-bg: rgba(255, 253, 248, 0.92);
+  --field: rgba(255, 250, 241, 0.82);
+  --section: rgba(255, 253, 248, 0.64);
+  --workspace-bg: rgba(255, 253, 248, 0.32);
+  --panel-bg: rgba(255, 253, 248, 0.58);
   --subtle-bg: #f1eadf;
   --contained-card-bg: #f3eadb;
   --coffee: #5a3825;
@@ -23,8 +23,8 @@
     linear-gradient(135deg, #f8f5ef 0%, #f2f6f2 48%, #f8f1eb 100%);
   --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-desktop-light.png");
   --background-wash:
-    linear-gradient(90deg, rgba(248, 245, 239, 0.76), rgba(248, 245, 239, 0.52)),
-    linear-gradient(180deg, rgba(255, 253, 248, 0.78), rgba(255, 253, 248, 0.42));
+    linear-gradient(90deg, rgba(248, 245, 239, 0.34), rgba(248, 245, 239, 0.18)),
+    linear-gradient(180deg, rgba(255, 253, 248, 0.32), rgba(255, 253, 248, 0.12));
   --card-text: #35413b;
   --shadow: 0 20px 60px rgba(48, 39, 29, 0.14);
   --font-display: "Fraunces", "Noto Serif SC", Georgia, serif;
@@ -38,10 +38,10 @@
   --paper: #171a17;
   --panel: #20231f;
   --line: #3b4039;
-  --field: #181b18;
-  --section: rgba(31, 35, 31, 0.88);
-  --workspace-bg: rgba(23, 26, 23, 0.8);
-  --panel-bg: rgba(28, 31, 28, 0.94);
+  --field: rgba(24, 27, 24, 0.82);
+  --section: rgba(31, 35, 31, 0.62);
+  --workspace-bg: rgba(23, 26, 23, 0.38);
+  --panel-bg: rgba(28, 31, 28, 0.64);
   --subtle-bg: #2a2d27;
   --contained-card-bg: #211d18;
   --coffee: #9d7659;
@@ -53,8 +53,8 @@
     linear-gradient(135deg, #151713 0%, #1e221c 48%, #201b19 100%);
   --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-desktop-night.png");
   --background-wash:
-    linear-gradient(90deg, rgba(14, 16, 14, 0.78), rgba(14, 16, 14, 0.52)),
-    linear-gradient(180deg, rgba(20, 23, 20, 0.78), rgba(20, 23, 20, 0.5));
+    linear-gradient(90deg, rgba(14, 16, 14, 0.42), rgba(14, 16, 14, 0.24)),
+    linear-gradient(180deg, rgba(20, 23, 20, 0.4), rgba(20, 23, 20, 0.18));
   --card-text: #d9ded5;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
 }
@@ -67,7 +67,8 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  background-image: var(--background-wash), var(--body-gradient), var(--background-image);
+  background-color: var(--paper);
+  background-image: var(--background-wash), var(--background-image), var(--body-gradient);
   background-attachment: fixed, fixed, fixed;
   background-position: center, center, center;
   background-repeat: no-repeat;
@@ -101,7 +102,7 @@ button {
   border-radius: 8px;
   background: var(--workspace-bg);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
 }
 
 .control-panel {
@@ -504,15 +505,15 @@ textarea:focus {
   :root {
     --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-mobile-light.png");
     --background-wash:
-      linear-gradient(180deg, rgba(248, 245, 239, 0.82), rgba(248, 245, 239, 0.56)),
-      linear-gradient(90deg, rgba(255, 253, 248, 0.7), rgba(255, 253, 248, 0.46));
+      linear-gradient(180deg, rgba(248, 245, 239, 0.44), rgba(248, 245, 239, 0.24)),
+      linear-gradient(90deg, rgba(255, 253, 248, 0.34), rgba(255, 253, 248, 0.16));
   }
 
   :root[data-theme="dark"] {
     --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-mobile-night.png");
     --background-wash:
-      linear-gradient(180deg, rgba(14, 16, 14, 0.84), rgba(14, 16, 14, 0.58)),
-      linear-gradient(90deg, rgba(20, 23, 20, 0.72), rgba(20, 23, 20, 0.48));
+      linear-gradient(180deg, rgba(14, 16, 14, 0.54), rgba(14, 16, 14, 0.32)),
+      linear-gradient(90deg, rgba(20, 23, 20, 0.44), rgba(20, 23, 20, 0.24));
   }
 
   body {
