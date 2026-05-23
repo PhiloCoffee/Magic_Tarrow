@@ -13,6 +13,24 @@ This repo now includes a dependency-free interactive website for PhiloCoffee Clu
 
 Open `index.html` directly in a browser, or host the folder with GitHub Pages.
 
+### Phone preview on local Wi-Fi
+
+For quick phone testing, connect the phone and computer to the same Wi-Fi, then run:
+
+```powershell
+.\serve-mobile.ps1
+```
+
+The script prints one or more LAN URLs like `http://192.168.x.x:4173/index.html`.
+Open that URL in the phone browser. To use another port:
+
+```powershell
+.\serve-mobile.ps1 8080
+```
+
+Responsive light/night backgrounds live in `assets/backgrounds/philocoffee/`.
+Desktop uses the wide images; mobile uses the portrait images. Dark mode uses the night set.
+
 ### Tarot artwork themes
 
 Tarot image themes live under `assets/tarot-themes/`.

@@ -86,28 +86,28 @@ const zhCards = {
 };
 
 const itCards = {
-  "the-fool": ["Il Matto", "coppa dell'inizio", "Parti con sincerita prima di cercare competenza."],
+  "the-fool": ["Il Matto", "coppa dell'inizio", "Parti con sincerit\u00e0 prima di cercare competenza."],
   "the-magician": ["Il Mago", "strumenti sul tavolo", "Trasforma chicchi, domande e persone in un rito che funziona."],
-  "the-high-priestess": ["La Papessa", "ascolto quieto", "Lascia parlare prima cio che nella stanza non e ancora stato detto."],
+  "the-high-priestess": ["La Papessa", "ascolto quieto", "Lascia parlare prima ci\u00f2 che nella stanza non \u00e8 ancora stato detto."],
   "the-empress": ["L'Imperatrice", "ospitalita calda", "Rendi l'incontro abbastanza generoso da accogliere voci nuove."],
-  "the-emperor": ["L'Imperatore", "struttura", "Dai al salotto una cornice, cosi la liberta puo restare dentro."],
+  "the-emperor": ["L'Imperatore", "struttura", "Dai al salotto una cornice, cos\u00ec la libert\u00e0 pu\u00f2 restare dentro."],
   "the-hierophant": ["Il Papa", "tradizione", "Prendi in prestito domande antiche senza restarne prigioniero."],
-  "the-lovers": ["Gli Amanti", "scelta", "Scegli una miscela che conservi insieme gusto e verita."],
+  "the-lovers": ["Gli Amanti", "scelta", "Scegli una miscela che conservi insieme gusto e verit\u00e0."],
   "the-chariot": ["Il Carro", "slancio", "Porta la conversazione verso un'azione visibile del club."],
   "strength": ["La Forza", "forza gentile", "Esercita coraggio senza indurire la stanza."],
-  "the-hermit": ["L'Eremita", "origine singola", "Una tazza tranquilla puo rivelare cio che il gruppo non ha visto."],
-  "wheel-of-fortune": ["La Ruota", "cambiamento", "Anche la prossima sorpresa puo diventare materiale di dialogo."],
+  "the-hermit": ["L'Eremita", "origine singola", "Una tazza tranquilla pu\u00f2 rivelare ci\u00f2 che il gruppo non ha visto."],
+  "wheel-of-fortune": ["La Ruota", "cambiamento", "Anche la prossima sorpresa pu\u00f2 diventare materiale di dialogo."],
   "justice": ["La Giustizia", "misura equa", "Chiedi chi trae beneficio dall'interpretazione presente."],
   "the-hanged-one": ["L'Appeso", "pausa", "Capovolgi la risposta ovvia e assaggiala di nuovo."],
   "death": ["La Morte", "rilascio", "Lascia finire una forma stanca, per fare spazio a un rito migliore."],
   "temperance": ["La Temperanza", "miscela", "Bilancia intensita e cura, teoria e vita quotidiana."],
   "the-devil": ["Il Diavolo", "attaccamento", "Nomina l'abitudine che fa girare il club in cerchio."],
-  "the-tower": ["La Torre", "rottura", "Quando il piano si incrina, usa con onesta quell'apertura."],
+  "the-tower": ["La Torre", "rottura", "Quando il piano si incrina, usa con onest\u00e0 quell'apertura."],
   "the-star": ["La Stella", "speranza", "Tieni sul tavolo una speranza concreta."],
   "the-moon": ["La Luna", "ambiguita", "Non forzare il mistero dentro una conclusione ordinata."],
   "the-sun": ["Il Sole", "chiarezza", "Condividi l'intuizione in modo abbastanza chiaro da invitare altri."],
   "judgement": ["Il Giudizio", "chiamata", "Ascolta la domanda che il club sta diventando."],
-  "the-world": ["Il Mondo", "cerchio", "Chiudi la sessione restituendo l'intuizione alla comunita."]
+  "the-world": ["Il Mondo", "cerchio", "Chiudi la sessione restituendo l'intuizione alla comunit\u00e0."]
 };
 
 const defaultThemes = [
@@ -155,6 +155,9 @@ const translations = {
     importTheme: "Import theme",
     drawCards: "Draw cards",
     reset: "Reset",
+    themeModeSystem: "System",
+    themeModeLight: "Light",
+    themeModeDark: "Dark",
     heroEyebrow: "Where coffee meets philosophy",
     heroTitle: "Turn a club question into a shared ritual.",
     readingLabel: "Reading",
@@ -216,6 +219,9 @@ const translations = {
     importTheme: "\u5bfc\u5165\u4e3b\u9898",
     drawCards: "\u62bd\u724c",
     reset: "\u91cd\u7f6e",
+    themeModeSystem: "\u8ddf\u968f\u7cfb\u7edf",
+    themeModeLight: "\u6d45\u8272",
+    themeModeDark: "\u6df1\u8272",
     heroEyebrow: "\u5496\u5561\u9047\u5230\u54f2\u5b66\u7684\u5730\u65b9",
     heroTitle: "\u628a\u4e00\u4e2a\u793e\u56e2\u95ee\u9898\uff0c\u53d8\u6210\u4e00\u573a\u5171\u540c\u4eea\u5f0f\u3002",
     readingLabel: "\u724c\u9762\u89e3\u8bfb",
@@ -277,16 +283,19 @@ const translations = {
     importTheme: "Importa tema",
     drawCards: "Pesca carte",
     reset: "Azzera",
-    heroEyebrow: "Dove il caffe incontra la filosofia",
+    themeModeSystem: "Sistema",
+    themeModeLight: "Chiaro",
+    themeModeDark: "Scuro",
+    heroEyebrow: "Dove il caff\u00e8 incontra la filosofia",
     heroTitle: "Trasforma una domanda del club in un rito condiviso.",
     readingLabel: "Lettura",
     brewLabel: "Spunto di infusione",
     agoraLabel: "Nota dell'agora",
     notesLabel: "Note del club",
     notesPlaceholder: "Annota una citazione, un'azione o una domanda per il prossimo salotto.",
-    initialReading: "Scrivi una domanda, scegli una stesa e pesca. Lo studio colleghera immagini dei tarocchi, caffe, filosofia e una piccola azione per il prossimo incontro PhiloCoffee.",
+    initialReading: "Scrivi una domanda, scegli una stesa e pesca. Lo studio collegher\u00e0 immagini dei tarocchi, caff\u00e8, filosofia e una piccola azione per il prossimo incontro PhiloCoffee.",
     initialBrew: "Una buona sessione comincia con una tazza condivisa e una domanda onesta.",
-    initialAgora: "Lascia spazio al disaccordo; spesso la conversazione si sveglia proprio li.",
+    initialAgora: "Lascia spazio al disaccordo; spesso la conversazione si sveglia proprio l\u00ec.",
     emptyQuestion: "Che cosa dovrebbe notare PhiloCoffee prima del prossimo incontro?",
     readingIntro: "Per questa domanda PhiloCoffee",
     spreadSays: "la stesa suggerisce",
@@ -299,15 +308,15 @@ const translations = {
     openWith: "Lascia che {first} apra la stanza e che {last} decida l'azione di chiusura.",
     singleAgora: "Lascia che {card} diventi una domanda a cui ognuno risponde in una frase.",
     coffee: "Prepara una tazza lentamente, poi lascia che ognuno nomini il sapore dell'idea prima di discuterla.",
-    philosophy: "Chiedi: quale presupposto beviamo cosi spesso da non sentirne piu il gusto?",
+    philosophy: "Chiedi: quale presupposto beviamo cos\u00ec spesso da non sentirne pi\u00f9 il gusto?",
     community: "Concludi con un facilitatore, un invito e un piccolo esperimento per il prossimo incontro.",
-    future: "Scrivi il prossimo poster come una domanda, non come uno slogan; lascia che la curiosita recluti.",
+    future: "Scrivi il prossimo poster come una domanda, non come uno slogan; lascia che la curiosit\u00e0 recluti.",
     copied: "Riepilogo copiato",
     copy: "Copia riepilogo",
     toneLabels: {
-      Coffee: "Caffe",
+      Coffee: "Caff\u00e8",
       Philosophy: "Filosofia",
-      Community: "Comunita",
+      Community: "Comunit\u00e0",
       Future: "Futuro"
     },
     spreadLabels: {
@@ -354,6 +363,9 @@ const notesInput = document.querySelector("#notes");
 const copySummary = document.querySelector("#copySummary");
 const themeOptions = document.querySelector("#themeOptions");
 const themeImport = document.querySelector("#themeImport");
+const themeModeToggle = document.querySelector("#themeModeToggle");
+const themeModes = ["system", "light", "dark"];
+let themeMode = localStorage.getItem("philo-theme-mode") || "system";
 
 function normalizeTheme(theme) {
   const cards = theme.cards || {};
@@ -496,6 +508,36 @@ function applyLanguage() {
   });
 
   renderThemeOptions();
+  updateThemeModeButton();
+}
+
+function preferredDarkMode() {
+  return window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+}
+
+function applyThemeMode() {
+  const resolvedTheme = themeMode === "system"
+    ? (preferredDarkMode() ? "dark" : "light")
+    : themeMode;
+  document.documentElement.dataset.theme = resolvedTheme;
+  updateThemeModeButton();
+}
+
+function updateThemeModeButton() {
+  const text = translations[language];
+  const labels = {
+    system: text.themeModeSystem,
+    light: text.themeModeLight,
+    dark: text.themeModeDark
+  };
+  const icons = {
+    system: "◐",
+    light: "☼",
+    dark: "☾"
+  };
+  themeModeToggle.textContent = icons[themeMode];
+  themeModeToggle.title = labels[themeMode];
+  themeModeToggle.setAttribute("aria-label", labels[themeMode]);
 }
 
 function sampleDeck(count) {
@@ -659,6 +701,20 @@ document.querySelector("#languageToggle").addEventListener("click", () => {
   }
 });
 
+themeModeToggle.addEventListener("click", () => {
+  const nextIndex = (themeModes.indexOf(themeMode) + 1) % themeModes.length;
+  themeMode = themeModes[nextIndex];
+  localStorage.setItem("philo-theme-mode", themeMode);
+  applyThemeMode();
+});
+
+const colorSchemeQuery = window.matchMedia?.("(prefers-color-scheme: dark)");
+colorSchemeQuery?.addEventListener?.("change", () => {
+  if (themeMode === "system") {
+    applyThemeMode();
+  }
+});
+
 themeImport.addEventListener("change", async () => {
   const [file] = themeImport.files;
   if (!file) return;
@@ -680,6 +736,7 @@ copySummary.addEventListener("click", async () => {
 });
 
 loadThemeRegistry().finally(() => {
+  applyThemeMode();
   applyLanguage();
   drawCards();
 });
