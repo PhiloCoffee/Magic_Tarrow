@@ -4,6 +4,12 @@ Maybe this repo can bring some luck to our club.
 
 ## PhiloCoffee Tarot Studio
 
+Live demo:
+
+```text
+https://philocoffee.github.io/Magic_Tarrow/
+```
+
 This repo includes a dependency-free interactive website for PhiloCoffee Club:
 
 - asks a club question
@@ -12,6 +18,7 @@ This repo includes a dependency-free interactive website for PhiloCoffee Club:
 - connects the spread to coffee, philosophy, and community action
 - supports English, Chinese, and Italian
 - supports light, dark, and system display modes
+- can be installed to a phone home screen as a lightweight PWA
 - uses responsive PhiloCoffee background art with translucent interface panels
 - copies a session summary for club notes
 
@@ -30,6 +37,30 @@ Then open:
 ```text
 http://localhost:4173/
 ```
+
+## GitHub Pages Deployment
+
+The app is packaged for GitHub Pages:
+
+- `.nojekyll` disables Jekyll processing.
+- `.github/workflows/pages.yml` deploys the static site when `main` changes.
+- `manifest.webmanifest` and `service-worker.js` provide installable PWA behavior.
+- All asset paths are relative, so the app works under `/Magic_Tarrow/`.
+- PhiloCoffee card and background PNGs have lighter JPEG delivery copies; the deploy workflow removes the unreferenced source PNGs from the Pages artifact.
+
+To enable the workflow deployment in GitHub:
+
+1. Open `Settings -> Pages`.
+2. Set `Source` to `GitHub Actions`.
+3. Push to `main` or run the workflow manually.
+
+Expected public URL:
+
+```text
+https://philocoffee.github.io/Magic_Tarrow/
+```
+
+The service worker caches the app shell first. Large tarot card images are cached only after they are requested, which keeps the first mobile visit lighter.
 
 ## Phone Preview On Local Wi-Fi
 

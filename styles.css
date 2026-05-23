@@ -21,7 +21,7 @@
   --body-gradient:
     radial-gradient(circle at 8% 0%, rgba(196, 150, 58, 0.18), transparent 28rem),
     linear-gradient(135deg, #f8f5ef 0%, #f2f6f2 48%, #f8f1eb 100%);
-  --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-desktop-light.png");
+  --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-desktop-light.jpg");
   --background-wash:
     linear-gradient(90deg, rgba(248, 245, 239, 0.34), rgba(248, 245, 239, 0.18)),
     linear-gradient(180deg, rgba(255, 253, 248, 0.32), rgba(255, 253, 248, 0.12));
@@ -51,7 +51,7 @@
   --body-gradient:
     radial-gradient(circle at 8% 0%, rgba(212, 175, 99, 0.15), transparent 28rem),
     linear-gradient(135deg, #151713 0%, #1e221c 48%, #201b19 100%);
-  --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-desktop-night.png");
+  --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-desktop-night.jpg");
   --background-wash:
     linear-gradient(90deg, rgba(14, 16, 14, 0.42), rgba(14, 16, 14, 0.24)),
     linear-gradient(180deg, rgba(20, 23, 20, 0.4), rgba(20, 23, 20, 0.18));
@@ -503,14 +503,14 @@ textarea:focus {
 
 @media (max-width: 760px) {
   :root {
-    --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-mobile-light.png");
+    --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-mobile-light.jpg");
     --background-wash:
       linear-gradient(180deg, rgba(248, 245, 239, 0.44), rgba(248, 245, 239, 0.24)),
       linear-gradient(90deg, rgba(255, 253, 248, 0.34), rgba(255, 253, 248, 0.16));
   }
 
   :root[data-theme="dark"] {
-    --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-mobile-night.png");
+    --background-image: url("assets/backgrounds/philocoffee/philocoffee-bg-mobile-night.jpg");
     --background-wash:
       linear-gradient(180deg, rgba(14, 16, 14, 0.54), rgba(14, 16, 14, 0.32)),
       linear-gradient(90deg, rgba(20, 23, 20, 0.44), rgba(20, 23, 20, 0.24));

@@ -24,31 +24,31 @@ const deck = [
 ];
 
 const cardFiles = [
-  "00-the-fool.png",
-  "01-the-magician.png",
-  "02-the-high-priestess.png",
-  "03-the-empress.png",
-  "04-the-emperor.png",
-  "05-the-hierophant.png",
-  "06-the-lovers.png",
-  "07-the-chariot.png",
-  "08-strength.png",
-  "09-the-hermit.png",
-  "10-wheel-of-fortune.png",
-  "11-justice.png",
-  "12-the-hanged-one.png",
-  "13-death.png",
-  "14-temperance.png",
-  "15-the-devil.png",
-  "16-the-tower.png",
-  "17-the-star.png",
-  "18-the-moon.png",
-  "19-the-sun.png",
-  "20-judgement.png",
-  "21-the-world.png"
+  "00-the-fool.jpg",
+  "01-the-magician.jpg",
+  "02-the-high-priestess.jpg",
+  "03-the-empress.jpg",
+  "04-the-emperor.jpg",
+  "05-the-hierophant.jpg",
+  "06-the-lovers.jpg",
+  "07-the-chariot.jpg",
+  "08-strength.jpg",
+  "09-the-hermit.jpg",
+  "10-wheel-of-fortune.jpg",
+  "11-justice.jpg",
+  "12-the-hanged-one.jpg",
+  "13-death.jpg",
+  "14-temperance.jpg",
+  "15-the-devil.jpg",
+  "16-the-tower.jpg",
+  "17-the-star.jpg",
+  "18-the-moon.jpg",
+  "19-the-sun.jpg",
+  "20-judgement.jpg",
+  "21-the-world.jpg"
 ];
 
-const cardKeys = cardFiles.map((file) => file.replace(/^\d+-/, "").replace(/\.png$/, ""));
+const cardKeys = cardFiles.map((file) => file.replace(/^\d+-/, "").replace(/\.(png|jpe?g)$/i, ""));
 
 const cardDefinitions = deck.map(([name, keyword, glyph, meaning], index) => ({
   name,
@@ -139,7 +139,7 @@ const defaultThemes = [
     basePath: "assets/tarot-themes/rider-waite-smith/cards",
     imageFit: "contain",
     cards: Object.fromEntries(
-      cardDefinitions.map((card) => [card.key, card.defaultFile.replace(".png", ".jpg")])
+      cardDefinitions.map((card) => [card.key, card.defaultFile])
     )
   }
 ];
@@ -575,6 +575,9 @@ function renderCards(cards) {
     node.querySelector(".card-name").textContent = localized.name;
     node.querySelector(".card-keyword").textContent = localized.keyword;
     art.alt = `${localized.name} ${themeLabel(selectedTheme())} tarot illustration`;
+    art.loading = position === 0 ? "eager" : "lazy";
+    art.decoding = "async";
+    art.fetchPriority = position === 0 ? "high" : "auto";
 
     if (image) {
       art.addEventListener("load", () => front.classList.add("has-art"), { once: true });
@@ -672,6 +675,16 @@ async function importTheme(file) {
   }
 }
 
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator) || !window.isSecureContext) {
+    return;
+  }
+
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+  });
+}
+
 document.querySelectorAll("[data-tone]").forEach((button) => {
   button.addEventListener("click", () => {
     currentTone = button.dataset.tone;
@@ -740,3 +753,4 @@ loadThemeRegistry().finally(() => {
   applyLanguage();
   drawCards();
 });
+registerServiceWorker();
