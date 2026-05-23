@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PhiloCoffee Tarot Studio</title>
+    <meta
+      name="description"
+      content="An interactive coffee, philosophy, and tarot reflection tool for PhiloCoffee Club."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="PhiloCoffee tarot workspace">
+        <aside class="control-panel">
+          <div class="brand-lockup" aria-label="PhiloCoffee Club">
+            <div class="brand-mark" aria-hidden="true">哲</div>
+            <div>
+              <p class="eyebrow">PhiloCoffee / 哲咖</p>
+              <h1>Tarot Studio</h1>
+            </div>
+          </div>
+
+          <div class="panel-block">
+            <label for="question" data-i18n="questionLabel">Question for the table</label>
+            <textarea
+              id="question"
+              rows="5"
+              maxlength="220"
+              placeholder="What should our club notice before the next gathering?"
+            ></textarea>
+          </div>
+
+          <div class="panel-block">
+            <span class="control-label" data-i18n="toneLabel">Session flavor</span>
+            <div class="chip-row" id="toneOptions" role="group" aria-label="Session flavor">
+              <button class="chip is-active" type="button" data-tone="Coffee">Coffee</button>
+              <button class="chip" type="button" data-tone="Philosophy">Philosophy</button>
+              <button class="chip" type="button" data-tone="Community">Community</button>
+              <button class="chip" type="button" data-tone="Future">Future</button>
+            </div>
+          </div>
+
+          <div class="panel-block">
+            <span class="control-label" data-i18n="spreadLabel">Spread</span>
+            <div class="segmented" id="spreadOptions" role="group" aria-label="Tarot spread">
+              <button type="button" class="is-active" data-spread="1">1</button>
+              <button type="button" data-spread="3">3</button>
+              <button type="button" data-spread="5">5</button>
+            </div>
+          </div>
+
+          <div class="panel-block">
+            <span class="control-label" data-i18n="themeLabel">Deck theme</span>
+            <div class="chip-row" id="themeOptions" role="group" aria-label="Deck theme"></div>
+            <label class="import-theme">
+              <input id="themeImport" type="file" accept="application/json,.json" />
+              <span data-i18n="importTheme">Import theme</span>
+            </label>
+          </div>
+
+          <div class="button-row">
+            <button id="drawCards" class="primary-action" type="button" data-i18n="drawCards">Draw cards</button>
+            <button id="resetSession" class="ghost-action" type="button" aria-label="Reset session" data-i18n="reset">
+              Reset
+            </button>
+          </div>
+
+          <div class="session-meta" aria-label="Club context">
+            <div>
+              <strong>3</strong>
+              <span>club currents</span>
+            </div>
+            <div>
+              <strong>20+</strong>
+              <span>open questions</span>
+            </div>
+            <div>
+              <strong>ZJU</strong>
+              <span>campus ground</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="reading-surface">
+          <header class="surface-header">
+            <div>
+              <p class="eyebrow" data-i18n="heroEyebrow">Where coffee meets philosophy</p>
+              <h2 data-i18n="heroTitle">Turn a club question into a shared ritual.</h2>
+            </div>
+            <button id="languageToggle" class="language-toggle" type="button">EN / 中文</button>
+          </header>
+
+          <div class="cards-stage" id="cardsStage" aria-live="polite"></div>
+
+          <section class="reading-output" aria-label="Reading output">
+            <article>
+              <span class="mini-label" data-i18n="readingLabel">Reading</span>
+              <p id="readingText">
+                Pick a question, choose a spread, and draw. The studio will connect tarot imagery
+                with coffee, philosophy, and a small action for the next PhiloCoffee gathering.
+              </p>
+            </article>
+            <article>
+              <span class="mini-label" data-i18n="brewLabel">Brew prompt</span>
+              <p id="brewPrompt">A good session begins with one shared cup and one honest question.</p>
+            </article>
+            <article>
+              <span class="mini-label" data-i18n="agoraLabel">Agora note</span>
+              <p id="agoraNote">Leave space for disagreement; that is where the conversation wakes up.</p>
+            </article>
+          </section>
+
+          <section class="notes-panel" aria-label="Session notes">
+            <div>
+              <label for="notes" data-i18n="notesLabel">Club notes</label>
+              <textarea
+                id="notes"
+                rows="4"
+                placeholder="Capture a quote, an action item, or a question for the next salon."
+              ></textarea>
+            </div>
+            <button id="copySummary" class="ghost-action" type="button">Copy summary</button>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <template id="cardTemplate">
+      <button class="tarot-card" type="button">
+        <span class="card-back">
+          <span class="card-orbit" aria-hidden="true"></span>
+          <span class="card-symbol">☕</span>
+          <span class="card-brand">PhiloCoffee</span>
+        </span>
+        <span class="card-front">
+          <img class="card-art" alt="" />
+          <span class="card-index"></span>
+          <span class="card-glyph"></span>
+          <span class="card-name"></span>
+          <span class="card-keyword"></span>
+        </span>
+      </button>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

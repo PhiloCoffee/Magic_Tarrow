@@ -1,0 +1,42 @@
+{
+  "id": "philocoffee",
+  "label": "PhiloCoffee",
+  "description": "Coffee, philosophy, and salon-themed Major Arcana artwork.",
+  "basePath": "assets/tarot-themes/philocoffee/cards",
+  "variantPath": "assets/tarot-themes/philocoffee/variants",
+  "cards": {
+    "the-fool": "00-the-fool.png",
+    "the-magician": "01-the-magician.png",
+    "the-high-priestess": "02-the-high-priestess.png",
+    "the-empress": "03-the-empress.png",
+    "the-emperor": "04-the-emperor.png",
+    "the-hierophant": "05-the-hierophant.png",
+    "the-lovers": "06-the-lovers.png",
+    "the-chariot": "07-the-chariot.png",
+    "strength": "08-strength.png",
+    "the-hermit": "09-the-hermit.png",
+    "wheel-of-fortune": "10-wheel-of-fortune.png",
+    "justice": "11-justice.png",
+    "the-hanged-one": "12-the-hanged-one.png",
+    "death": "13-death.png",
+    "temperance": "14-temperance.png",
+    "the-devil": "15-the-devil.png",
+    "the-tower": "16-the-tower.png",
+    "the-star": "17-the-star.png",
+    "the-moon": "18-the-moon.png",
+    "the-sun": "19-the-sun.png",
+    "judgement": "20-judgement.png",
+    "the-world": "21-the-world.png"
+  },
+  "variants": {
+    "the-lovers": "06-the-lovers-variant-reflection.png",
+    "the-hermit": "09-the-hermit-variant-cloistered-night.png",
+    "justice": "11-justice-variant-balance-discourse.png",
+    "the-hanged-one": "12-the-hanged-one-variant-whimsical-garden.png",
+    "the-devil": "15-the-devil-variant-productivity.png",
+    "the-tower": "16-the-tower-variant-knowledge-chaos.png",
+    "judgement": "20-judgement-variant-ghostwriter-export.png",
+    "the-world": "21-the-world-variant-ghostwriter-export.png"
+  },
+  "missing": ["the-hierophant"]
+}

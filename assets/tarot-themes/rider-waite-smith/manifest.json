@@ -1,0 +1,32 @@
+{
+  "id": "rider-waite-smith",
+  "label": "Classic RWS",
+  "description": "Public-domain Rider-Waite-Smith Major Arcana images from Wikimedia Commons.",
+  "source": "https://commons.wikimedia.org/wiki/Category:Rider-Waite_tarot_deck",
+  "license": "Public domain; verify local jurisdiction before redistribution.",
+  "basePath": "assets/tarot-themes/rider-waite-smith/cards",
+  "cards": {
+    "the-fool": "00-the-fool.jpg",
+    "the-magician": "01-the-magician.jpg",
+    "the-high-priestess": "02-the-high-priestess.jpg",
+    "the-empress": "03-the-empress.jpg",
+    "the-emperor": "04-the-emperor.jpg",
+    "the-hierophant": "05-the-hierophant.jpg",
+    "the-lovers": "06-the-lovers.jpg",
+    "the-chariot": "07-the-chariot.jpg",
+    "strength": "08-strength.jpg",
+    "the-hermit": "09-the-hermit.jpg",
+    "wheel-of-fortune": "10-wheel-of-fortune.jpg",
+    "justice": "11-justice.jpg",
+    "the-hanged-one": "12-the-hanged-one.jpg",
+    "death": "13-death.jpg",
+    "temperance": "14-temperance.jpg",
+    "the-devil": "15-the-devil.jpg",
+    "the-tower": "16-the-tower.jpg",
+    "the-star": "17-the-star.jpg",
+    "the-moon": "18-the-moon.jpg",
+    "the-sun": "19-the-sun.jpg",
+    "judgement": "20-judgement.jpg",
+    "the-world": "21-the-world.jpg"
+  }
+}
