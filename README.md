@@ -1,4 +1,4 @@
-# Magic_Tarrow
+# Magic_Tarot_Agent
 
 Maybe this repo can bring some luck to our club.
 
@@ -7,7 +7,7 @@ Maybe this repo can bring some luck to our club.
 Live demo:
 
 ```text
-https://philocoffee.github.io/Magic_Tarrow/
+https://philocoffee.github.io/Magic_Tarot_Agent/
 ```
 
 This repo includes a dependency-free interactive website for PhiloCoffee Club:
@@ -45,7 +45,7 @@ The app is packaged for GitHub Pages:
 - `.nojekyll` disables Jekyll processing.
 - `.github/workflows/pages.yml` deploys the static site when `main` changes.
 - `manifest.webmanifest` and `service-worker.js` provide installable PWA behavior.
-- All asset paths are relative, so the app works under `/Magic_Tarrow/`.
+- All asset paths are relative, so the app works under `/Magic_Tarot_Agent/`.
 - PhiloCoffee card and background PNGs have lighter JPEG delivery copies; the deploy workflow removes the unreferenced source PNGs from the Pages artifact.
 
 To enable the workflow deployment in GitHub:
@@ -57,7 +57,7 @@ To enable the workflow deployment in GitHub:
 Expected public URL:
 
 ```text
-https://philocoffee.github.io/Magic_Tarrow/
+https://philocoffee.github.io/Magic_Tarot_Agent/
 ```
 
 The service worker caches the app shell first. Large tarot card images are cached only after they are requested, which keeps the first mobile visit lighter.
