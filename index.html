@@ -103,6 +103,54 @@
             </article>
           </section>
 
+          <section class="ai-reading-panel" id="aiReadingPanel" aria-label="AI oracle reading">
+            <div class="ai-panel-header">
+              <span class="mini-label" data-i18n="aiReadingLabel">AI Reading</span>
+              <button class="icon-toggle" id="aiSettingsToggle" type="button" title="API key settings">⚙</button>
+            </div>
+            <div class="ai-settings" id="aiSettings" hidden>
+              <label for="apiKey" data-i18n="aiKeyLabel">Anthropic API key</label>
+              <input type="password" id="apiKey" autocomplete="off" placeholder="sk-ant-..." />
+              <p class="ai-hint" data-i18n="aiKeyHint">Your key is stored only in this browser. Calls go directly to Anthropic.</p>
+            </div>
+            <div class="ai-inputs">
+              <div class="ai-input-row">
+                <span class="control-label" data-i18n="aiFeelingLabel">How are you feeling lately?</span>
+                <div class="chip-row" id="feelingOptions" role="group">
+                  <button class="chip" type="button" data-feeling="great">Great</button>
+                  <button class="chip" type="button" data-feeling="good">Good</button>
+                  <button class="chip" type="button" data-feeling="neutral">Neutral</button>
+                  <button class="chip" type="button" data-feeling="unsettled">Unsettled</button>
+                  <button class="chip" type="button" data-feeling="struggling">Struggling</button>
+                </div>
+              </div>
+              <div class="ai-input-row">
+                <span class="control-label" data-i18n="aiSubjectLabel">Area of focus</span>
+                <div class="chip-row" id="subjectOptions" role="group">
+                  <button class="chip" type="button" data-subject="work">Work</button>
+                  <button class="chip" type="button" data-subject="study">Study</button>
+                  <button class="chip" type="button" data-subject="research">Research</button>
+                  <button class="chip" type="button" data-subject="love">Love</button>
+                  <button class="chip" type="button" data-subject="life">Life</button>
+                </div>
+              </div>
+              <div class="ai-input-row">
+                <label for="aiContext" data-i18n="aiContextLabel">Optional context</label>
+                <textarea id="aiContext" rows="2" placeholder="Share what's on your mind..."></textarea>
+              </div>
+            </div>
+            <div class="ai-button-row">
+              <button id="askCards" class="primary-action ai-ask-btn" type="button" disabled data-i18n="askCards">Ask the cards</button>
+              <button id="askCardsSmart" class="ghost-action ai-smart-btn" type="button" disabled data-i18n="askCardsSmart">Deeper reading (Sonnet)</button>
+            </div>
+            <div class="ai-response" id="aiResponse" hidden>
+              <div class="ai-response-header">
+                <span class="mini-label" data-i18n="aiResponseLabel">Oracle reading</span>
+              </div>
+              <div id="aiResponseText" class="ai-response-text"></div>
+            </div>
+          </section>
+
           <section class="notes-panel" aria-label="Session notes">
             <div>
               <label for="notes" data-i18n="notesLabel">Club notes</label>

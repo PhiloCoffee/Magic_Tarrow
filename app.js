@@ -1,26 +1,26 @@
 const deck = [
-  ["The Fool", "beginner's cup", "0", "Start with sincerity before expertise."],
-  ["The Magician", "tools on the table", "*", "Turn beans, questions, and people into a working ritual."],
-  ["The High Priestess", "quiet listening", "II", "Let the unsaid part of the room speak first."],
-  ["The Empress", "warm hospitality", "III", "Make the gathering generous enough for new voices."],
-  ["The Emperor", "structure", "IV", "Give the salon a frame so freedom can survive inside it."],
-  ["The Hierophant", "tradition", "V", "Borrow old questions without becoming trapped by them."],
-  ["The Lovers", "choice", "VI", "Choose the blend that keeps both taste and truth alive."],
-  ["The Chariot", "momentum", "VII", "Move from conversation to a visible club action."],
-  ["Strength", "gentle force", "VIII", "Practice courage without making the room hard."],
-  ["The Hermit", "single origin", "IX", "A quiet cup may reveal what the group missed."],
-  ["Wheel of Fortune", "change", "X", "The next surprise is also material for inquiry."],
-  ["Justice", "fair measure", "XI", "Ask who benefits from the current interpretation."],
-  ["The Hanged One", "pause", "XII", "Invert the obvious answer and taste it again."],
-  ["Death", "release", "XIII", "Let one tired format end so a better ritual can arrive."],
-  ["Temperance", "blend", "XIV", "Balance intensity with care, theory with daily life."],
-  ["The Devil", "attachment", "XV", "Name the habit that keeps the club circling."],
-  ["The Tower", "rupture", "XVI", "When the plan cracks, use the opening honestly."],
-  ["The Star", "hope", "XVII", "Keep one practical hope visible on the table."],
-  ["The Moon", "ambiguity", "XVIII", "Do not rush mystery into a tidy conclusion."],
-  ["The Sun", "clarity", "XIX", "Share the insight plainly enough to invite others in."],
-  ["Judgement", "calling", "XX", "Listen for the question the club is becoming."],
-  ["The World", "circle", "XXI", "Close the session by returning insight to community."]
+  ["The Fool", "beginner's cup", "0", { upright: "New beginnings, innocence, spontaneity, a free spirit.", reversed: "Holding back, recklessness, risk-taking." }],
+  ["The Magician", "tools on the table", "*", { upright: "Manifestation, resourcefulness, power, inspired action.", reversed: "Manipulation, poor planning, untapped talents." }],
+  ["The High Priestess", "quiet listening", "II", { upright: "Intuition, sacred knowledge, divine feminine, the subconscious mind.", reversed: "Secrets, disconnected from intuition, withdrawal and silence." }],
+  ["The Empress", "warm hospitality", "III", { upright: "Femininity, beauty, nature, nurturing, abundance.", reversed: "Creative block, dependence on others." }],
+  ["The Emperor", "structure", "IV", { upright: "Authority, establishment, structure, a father figure.", reversed: "Domination, excessive control, lack of discipline, inflexibility." }],
+  ["The Hierophant", "tradition", "V", { upright: "Spiritual wisdom, religious beliefs, conformity, tradition, institutions.", reversed: "Personal beliefs, freedom, challenging the status quo." }],
+  ["The Lovers", "choice", "VI", { upright: "Love, harmony, relationships, values alignment, choices.", reversed: "Self-love, disharmony, imbalance, misalignment of values." }],
+  ["The Chariot", "momentum", "VII", { upright: "Control, willpower, success, action, determination.", reversed: "Self-discipline, opposition, lack of direction." }],
+  ["Strength", "gentle force", "VIII", { upright: "Strength, courage, patience, control, compassion.", reversed: "Inner strength, self-doubt, low energy, raw emotion." }],
+  ["The Hermit", "single origin", "IX", { upright: "Soul-searching, introspection, being alone, inner guidance.", reversed: "Isolation, loneliness, withdrawal." }],
+  ["Wheel of Fortune", "change", "X", { upright: "Good luck, karma, life cycles, destiny, a turning point.", reversed: "Bad luck, resistance to change, breaking cycles." }],
+  ["Justice", "fair measure", "XI", { upright: "Justice, fairness, truth, cause and effect, law.", reversed: "Unfairness, lack of accountability, dishonesty." }],
+  ["The Hanged One", "pause", "XII", { upright: "Pause, surrender, letting go, new perspectives.", reversed: "Delays, resistance, stalling, indecision." }],
+  ["Death", "release", "XIII", { upright: "Endings, change, transformation, transition.", reversed: "Resistance to change, personal transformation, inner purging." }],
+  ["Temperance", "blend", "XIV", { upright: "Balance, moderation, patience, purpose.", reversed: "Imbalance, excess, self-healing, realignment." }],
+  ["The Devil", "attachment", "XV", { upright: "Shadow self, attachment, addiction, restriction, sexuality.", reversed: "Releasing limiting beliefs, exploring dark thoughts, detachment." }],
+  ["The Tower", "rupture", "XVI", { upright: "Sudden change, upheaval, chaos, revelation, awakening.", reversed: "Personal transformation, fear of change, averting disaster." }],
+  ["The Star", "hope", "XVII", { upright: "Hope, faith, purpose, renewal, spirituality.", reversed: "Lack of faith, despair, self-trust, disconnection." }],
+  ["The Moon", "ambiguity", "XVIII", { upright: "Illusion, fear, the unconscious, intuition.", reversed: "Release of fear, repressed emotion, inner confusion." }],
+  ["The Sun", "clarity", "XIX", { upright: "Positivity, fun, warmth, success, vitality.", reversed: "Inner child, feeling down, overly optimistic." }],
+  ["Judgement", "calling", "XX", { upright: "Judgement, rebirth, inner calling, absolution.", reversed: "Self-doubt, inner critic, ignoring the call." }],
+  ["The World", "circle", "XXI", { upright: "Completion, integration, accomplishment, travel.", reversed: "Seeking personal closure, short-cuts, delays." }]
 ];
 
 const cardFiles = [
@@ -61,53 +61,53 @@ const cardDefinitions = deck.map(([name, keyword, glyph, meaning], index) => ({
 }));
 
 const zhCards = {
-  "the-fool": ["愚者", "初心之杯", "先带着真诚出发，不急着显得专业。"],
-  "the-magician": ["魔术师", "桌上的工具", "把咖啡、问题和人变成一场可运作的仪式。"],
-  "the-high-priestess": ["女祭司", "安静倾听", "先让房间里没被说出口的部分发声。"],
-  "the-empress": ["皇后", "温暖款待", "让聚会足够慷慨，新声音才敢进入。"],
-  "the-emperor": ["皇帝", "结构", "给沙龙一个框架，让自由能在其中停留。"],
-  "the-hierophant": ["教皇", "传统", "借用古老的问题，但不要被它们困住。"],
-  "the-lovers": ["恋人", "选择", "选择一种同时保留风味与真实的混合方式。"],
-  "the-chariot": ["战车", "推进", "把谈话推进成一个看得见的社团行动。"],
-  "strength": ["力量", "温柔的力量", "练习勇气，但不要让房间变硬。"],
-  "the-hermit": ["隐者", "单品思考", "一杯安静的咖啡也许会显出群体漏看的东西。"],
-  "wheel-of-fortune": ["命运之轮", "变化", "下一次意外也可以成为讨论材料。"],
-  "justice": ["正义", "公平衡量", "追问：当前解释让谁受益？"],
-  "the-hanged-one": ["倒吊人", "暂停", "把显而易见的答案倒过来，再尝一次。"],
-  "death": ["死神", "释放", "让一个疲惫的形式结束，新的仪式才有空间到来。"],
-  "temperance": ["节制", "调和", "在强度与照料、理论与日常之间取得平衡。"],
-  "the-devil": ["恶魔", "依附", "说出那个让社团一直原地打转的习惯。"],
-  "the-tower": ["高塔", "裂变", "当计划破裂时，诚实地使用那个开口。"],
-  "the-star": ["星星", "希望", "让一个实际的希望留在桌面上。"],
-  "the-moon": ["月亮", "暧昧", "不要急着把谜团整理成漂亮结论。"],
-  "the-sun": ["太阳", "清晰", "把洞见说得足够明白，才能邀请别人加入。"],
-  "judgement": ["审判", "召唤", "听见社团正在成为的那个问题。"],
-  "the-world": ["世界", "圆满", "把洞见交还给共同体，完成这一次循环。"]
+  "the-fool": ["愚者", "初心之杯", { upright: "新的开始，天真无邪，自发性，自由精神。", reversed: "鲁莽冒进，退缩，过度冒险。" }],
+  "the-magician": ["魔术师", "桌上的工具", { upright: "显化，机智，力量，灵感行动。", reversed: "操控，计划不当，才能未被发挥。" }],
+  "the-high-priestess": ["女祭司", "安静倾听", { upright: "直觉，神圣知识，神圣女性，潜意识。", reversed: "秘密，与直觉断连，退缩与沉默。" }],
+  "the-empress": ["皇后", "温暖款待", { upright: "女性特质，美丽，自然，滋养，富足。", reversed: "创意阻塞，依赖他人。" }],
+  "the-emperor": ["皇帝", "结构", { upright: "权威，建立，结构，父亲形象。", reversed: "支配，过度控制，缺乏自律，僵化。" }],
+  "the-hierophant": ["教皇", "传统", { upright: "精神智慧，宗教信仰，从众，传统，制度。", reversed: "个人信仰，自由，挑战现状。" }],
+  "the-lovers": ["恋人", "选择", { upright: "爱，和谐，关系，价值观对齐，选择。", reversed: "自爱，不和谐，失衡，价值观错位。" }],
+  "the-chariot": ["战车", "推进", { upright: "控制，意志力，成功，行动，决心。", reversed: "自律，反对，缺乏方向。" }],
+  "strength": ["力量", "温柔的力量", { upright: "力量，勇气，耐心，控制，慈悲。", reversed: "内在力量，自我怀疑，能量低落，原始情绪。" }],
+  "the-hermit": ["隐者", "单品思考", { upright: "灵魂探索，内省，独处，内在指引。", reversed: "孤立，孤独，退缩。" }],
+  "wheel-of-fortune": ["命运之轮", "变化", { upright: "好运，因果，生命循环，命运，转折点。", reversed: "厄运，抗拒改变，打破循环。" }],
+  "justice": ["正义", "公平衡量", { upright: "正义，公平，真理，因果律，法律。", reversed: "不公平，缺乏责任，不诚实。" }],
+  "the-hanged-one": ["倒吊人", "暂停", { upright: "暂停，臣服，放手，新视角。", reversed: "延迟，抗拒，拖延，犹豫不决。" }],
+  "death": ["死神", "释放", { upright: "结束，改变，转化，过渡。", reversed: "抗拒改变，个人转化，内在净化。" }],
+  "temperance": ["节制", "调和", { upright: "平衡，适度，耐心，目标。", reversed: "失衡，过度，自我疗愈，重新调整。" }],
+  "the-devil": ["恶魔", "依附", { upright: "阴影自我，依附，成瘾，限制，欲望。", reversed: "释放限制性信念，探索黑暗面，超然。" }],
+  "the-tower": ["高塔", "裂变", { upright: "突然改变，动荡，混乱，启示，觉醒。", reversed: "个人转化，害怕改变，化解灾难。" }],
+  "the-star": ["星星", "希望", { upright: "希望，信念，目标，更新，灵性。", reversed: "缺乏信念，绝望，自信，断连。" }],
+  "the-moon": ["月亮", "暧昧", { upright: "幻象，恐惧，潜意识，直觉。", reversed: "释放恐惧，被压抑的情绪，内在混乱。" }],
+  "the-sun": ["太阳", "清晰", { upright: "积极，乐趣，温暖，成功，活力。", reversed: "内在小孩，情绪低落，过度乐观。" }],
+  "judgement": ["审判", "召唤", { upright: "审判，重生，内在召唤，赦免。", reversed: "自我怀疑，内在批判，忽视召唤。" }],
+  "the-world": ["世界", "圆满", { upright: "完成，整合，成就，旅行。", reversed: "寻求个人圆满，走捷径，延迟。" }]
 };
 
 const itCards = {
-  "the-fool": ["Il Matto", "coppa dell'inizio", "Parti con sincerit\u00e0 prima di cercare competenza."],
-  "the-magician": ["Il Mago", "strumenti sul tavolo", "Trasforma chicchi, domande e persone in un rito che funziona."],
-  "the-high-priestess": ["La Papessa", "ascolto quieto", "Lascia parlare prima ci\u00f2 che nella stanza non \u00e8 ancora stato detto."],
-  "the-empress": ["L'Imperatrice", "ospitalita calda", "Rendi l'incontro abbastanza generoso da accogliere voci nuove."],
-  "the-emperor": ["L'Imperatore", "struttura", "Dai al salotto una cornice, cos\u00ec la libert\u00e0 pu\u00f2 restare dentro."],
-  "the-hierophant": ["Il Papa", "tradizione", "Prendi in prestito domande antiche senza restarne prigioniero."],
-  "the-lovers": ["Gli Amanti", "scelta", "Scegli una miscela che conservi insieme gusto e verit\u00e0."],
-  "the-chariot": ["Il Carro", "slancio", "Porta la conversazione verso un'azione visibile del club."],
-  "strength": ["La Forza", "forza gentile", "Esercita coraggio senza indurire la stanza."],
-  "the-hermit": ["L'Eremita", "origine singola", "Una tazza tranquilla pu\u00f2 rivelare ci\u00f2 che il gruppo non ha visto."],
-  "wheel-of-fortune": ["La Ruota", "cambiamento", "Anche la prossima sorpresa pu\u00f2 diventare materiale di dialogo."],
-  "justice": ["La Giustizia", "misura equa", "Chiedi chi trae beneficio dall'interpretazione presente."],
-  "the-hanged-one": ["L'Appeso", "pausa", "Capovolgi la risposta ovvia e assaggiala di nuovo."],
-  "death": ["La Morte", "rilascio", "Lascia finire una forma stanca, per fare spazio a un rito migliore."],
-  "temperance": ["La Temperanza", "miscela", "Bilancia intensita e cura, teoria e vita quotidiana."],
-  "the-devil": ["Il Diavolo", "attaccamento", "Nomina l'abitudine che fa girare il club in cerchio."],
-  "the-tower": ["La Torre", "rottura", "Quando il piano si incrina, usa con onest\u00e0 quell'apertura."],
-  "the-star": ["La Stella", "speranza", "Tieni sul tavolo una speranza concreta."],
-  "the-moon": ["La Luna", "ambiguita", "Non forzare il mistero dentro una conclusione ordinata."],
-  "the-sun": ["Il Sole", "chiarezza", "Condividi l'intuizione in modo abbastanza chiaro da invitare altri."],
-  "judgement": ["Il Giudizio", "chiamata", "Ascolta la domanda che il club sta diventando."],
-  "the-world": ["Il Mondo", "cerchio", "Chiudi la sessione restituendo l'intuizione alla comunit\u00e0."]
+  "the-fool": ["Il Matto", "coppa dell'inizio", { upright: "Nuovi inizi, innocenza, spontaneit\u00e0, spirito libero.", reversed: "Prudenza eccessiva, avventatezza, assunzione di rischi." }],
+  "the-magician": ["Il Mago", "strumenti sul tavolo", { upright: "Manifestazione, intraprendenza, potere, azione ispirata.", reversed: "Manipolazione, pianificazione scarsa, talenti inespressi." }],
+  "the-high-priestess": ["La Papessa", "ascolto quieto", { upright: "Intuizione, sapienza sacra, femminile divino, inconscio.", reversed: "Segreti, disconnessione dall'intuizione, ritiro e silenzio." }],
+  "the-empress": ["L'Imperatrice", "ospitalit\u00e0 calda", { upright: "Femminil\u00e0, bellezza, natura, nutrimento, abbondanza.", reversed: "Blocco creativo, dipendenza dagli altri." }],
+  "the-emperor": ["L'Imperatore", "struttura", { upright: "Autorit\u00e0, stabilit\u00e0, struttura, figura paterna.", reversed: "Dominazione, controllo eccessivo, mancanza di disciplina, inflessibilit\u00e0." }],
+  "the-hierophant": ["Il Papa", "tradizione", { upright: "Saggezza spirituale, credenze religiose, conformit\u00e0, tradizione, istituzioni.", reversed: "Credenze personali, libert\u00e0, sfidare lo status quo." }],
+  "the-lovers": ["Gli Amanti", "scelta", { upright: "Amore, armonia, relazioni, allineamento di valori, scelte.", reversed: "Amor proprio, disarmonia, squilibrio, disallineamento di valori." }],
+  "the-chariot": ["Il Carro", "slancio", { upright: "Controllo, forza di volont\u00e0, successo, azione, determinazione.", reversed: "Autodisciplina, opposizione, mancanza di direzione." }],
+  "strength": ["La Forza", "forza gentile", { upright: "Forza, coraggio, pazienza, controllo, compassione.", reversed: "Forza interiore, dubbio di s\u00e9, bassa energia, emozione grezza." }],
+  "the-hermit": ["L'Eremita", "origine singola", { upright: "Ricerca dell'anima, introspezione, solitudine, guida interiore.", reversed: "Isolamento, solitudine, ritiro." }],
+  "wheel-of-fortune": ["La Ruota", "cambiamento", { upright: "Buona fortuna, karma, cicli della vita, destino, svolta.", reversed: "Malafortuna, resistenza al cambiamento, spezzare i cicli." }],
+  "justice": ["La Giustizia", "misura equa", { upright: "Giustizia, equit\u00e0, verit\u00e0, causa ed effetto, legge.", reversed: "Ingiustizia, mancanza di responsabilit\u00e0, disonest\u00e0." }],
+  "the-hanged-one": ["L'Appeso", "pausa", { upright: "Pausa, resa, lasciare andare, nuove prospettive.", reversed: "Ritardi, resistenza, temporeggiamento, indecisione." }],
+  "death": ["La Morte", "rilascio", { upright: "Fine, cambiamento, trasformazione, transizione.", reversed: "Resistenza al cambiamento, trasformazione personale, purificazione interiore." }],
+  "temperance": ["La Temperanza", "miscela", { upright: "Equilibrio, moderazione, pazienza, scopo.", reversed: "Squilibrio, eccesso, autoguarigione, riallineamento." }],
+  "the-devil": ["Il Diavolo", "attaccamento", { upright: "Io-ombra, attaccamento, dipendenza, limitazione, sessualit\u00e0.", reversed: "Liberarsi da credenze limitanti, esplorare pensieri oscuri, distacco." }],
+  "the-tower": ["La Torre", "rottura", { upright: "Cambiamento improvviso, sconvolgimento, caos, rivelazione, risveglio.", reversed: "Trasformazione personale, paura del cambiamento, scongiurare il disastro." }],
+  "the-star": ["La Stella", "speranza", { upright: "Speranza, fede, scopo, rinnovamento, spiritualit\u00e0.", reversed: "Mancanza di fede, disperazione, fiducia in s\u00e9, disconnessione." }],
+  "the-moon": ["La Luna", "ambiguit\u00e0", { upright: "Illusione, paura, inconscio, intuizione.", reversed: "Liberazione dalla paura, emozione repressa, confusione interiore." }],
+  "the-sun": ["Il Sole", "chiarezza", { upright: "Positivit\u00e0, divertimento, calore, successo, vitalit\u00e0.", reversed: "Il bambino interiore, senso di abbattimento, eccessivo ottimismo." }],
+  "judgement": ["Il Giudizio", "chiamata", { upright: "Giudizio, rinascita, chiamata interiore, assoluzione.", reversed: "Dubbio di s\u00e9, critico interiore, ignorare la chiamata." }],
+  "the-world": ["Il Mondo", "cerchio", { upright: "Completamento, integrazione, realizzazione, viaggio.", reversed: "Ricerca di chiusura personale, scorciatoie, ritardi." }]
 };
 
 const defaultThemes = [
@@ -207,7 +207,21 @@ const translations = {
       agora: "Agora note",
       notes: "Club notes",
       none: "None"
-    }
+    },
+    aiReadingLabel: "AI Reading",
+    aiKeyLabel: "Anthropic API key",
+    aiKeyHint: "Your key is stored only in this browser. Calls go directly to Anthropic.",
+    aiFeelingLabel: "How are you feeling lately?",
+    aiSubjectLabel: "Area of focus",
+    aiContextLabel: "Optional context",
+    aiContextPlaceholder: "Share what's on your mind...",
+    askCards: "Ask the cards",
+    aiResponseLabel: "Oracle reading",
+    aiLoading: "The cards are speaking...",
+    aiError: "Could not reach the oracle. Check your API key.",
+    aiFeelings: { great: "Great", good: "Good", neutral: "Neutral", unsettled: "Unsettled", struggling: "Struggling" },
+    aiSubjects: { work: "Work", study: "Study", research: "Research", love: "Love", life: "Life" },
+    askCardsSmart: "Deeper reading (Sonnet)"
   },
   zh: {
     appTitle: "\u5854\u7f57\u5de5\u4f5c\u53f0",
@@ -271,7 +285,21 @@ const translations = {
       agora: "\u5e7f\u573a\u5907\u6ce8",
       notes: "\u793e\u56e2\u7b14\u8bb0",
       none: "\u65e0"
-    }
+    },
+    aiReadingLabel: "AI \u89e3\u8bfb",
+    aiKeyLabel: "Anthropic API \u5bc6\u9470",
+    aiKeyHint: "\u5bc6\u9470\u4ec5\u5b58\u50a8\u5728\u672c\u5730\u6d4f\u89c8\u5668\u4e2d\uff0c\u8c03\u7528\u76f4\u63a5\u53d1\u5411 Anthropic\u3002",
+    aiFeelingLabel: "\u4f60\u6700\u8fd1\u611f\u89c9\u600e\u4e48\u6837\uff1f",
+    aiSubjectLabel: "\u5173\u6ce8\u9886\u57df",
+    aiContextLabel: "\u53ef\u9009\u80cc\u666f",
+    aiContextPlaceholder: "\u5206\u4eab\u4f60\u73b0\u5728\u5728\u60f3\u4ec0\u4e48\u2026",
+    askCards: "\u8bf7\u6559\u724c\u9635",
+    aiResponseLabel: "\u795e\u8c15\u89e3\u8bfb",
+    aiLoading: "\u724c\u9635\u6b63\u5728\u5021\u8bc9\u2026",
+    aiError: "\u65e0\u6cd5\u8fde\u63a5\u795e\u8c15\uff0c\u8bf7\u68c0\u67e5 API \u5bc6\u9470\u3002",
+    aiFeelings: { great: "\u5f88\u597d", good: "\u597d", neutral: "\u4e00\u822c", unsettled: "\u4e0d\u5b89", struggling: "\u56f0\u96be" },
+    aiSubjects: { work: "\u5de5\u4f5c", study: "\u5b66\u4e60", research: "\u7814\u7a76", love: "\u611f\u60c5", life: "\u751f\u6d3b" },
+    askCardsSmart: "\u6df1\u5ea6\u89e3\u8bfb (Sonnet)"
   },
   it: {
     appTitle: "Studio dei Tarocchi",
@@ -335,7 +363,21 @@ const translations = {
       agora: "Nota dell'agora",
       notes: "Note del club",
       none: "Nessuna"
-    }
+    },
+    aiReadingLabel: "Lettura AI",
+    aiKeyLabel: "Chiave API Anthropic",
+    aiKeyHint: "La chiave è salvata solo in questo browser. Le chiamate vanno direttamente ad Anthropic.",
+    aiFeelingLabel: "Come ti senti ultimamente?",
+    aiSubjectLabel: "Area di interesse",
+    aiContextLabel: "Contesto opzionale",
+    aiContextPlaceholder: "Condividi cosa hai in mente…",
+    askCards: "Chiedi alle carte",
+    aiResponseLabel: "Lettura oracolare",
+    aiLoading: "Le carte stanno parlando…",
+    aiError: "Impossibile raggiungere l'oracolo. Controlla la tua chiave API.",
+    aiFeelings: { great: "Benissimo", good: "Bene", neutral: "Neutro", unsettled: "Inquieto", struggling: "In difficoltà" },
+    aiSubjects: { work: "Lavoro", study: "Studio", research: "Ricerca", love: "Amore", life: "Vita" },
+    askCardsSmart: "Lettura approfondita (Sonnet)"
   }
 };
 
@@ -353,6 +395,9 @@ let language = "en";
 const languageOrder = ["en", "zh", "it"];
 let activeCards = [];
 
+let aiFeeling = "";
+let aiSubjects = new Set();
+
 const cardsStage = document.querySelector("#cardsStage");
 const cardTemplate = document.querySelector("#cardTemplate");
 const readingText = document.querySelector("#readingText");
@@ -366,6 +411,14 @@ const themeImport = document.querySelector("#themeImport");
 const themeModeToggle = document.querySelector("#themeModeToggle");
 const themeModes = ["system", "light", "dark"];
 let themeMode = localStorage.getItem("philo-theme-mode") || "system";
+
+const aiSettingsToggle = document.querySelector("#aiSettingsToggle");
+const aiSettingsPanel = document.querySelector("#aiSettings");
+const apiKeyInput = document.querySelector("#apiKey");
+const askCardsBtn = document.querySelector("#askCards");
+const aiResponseEl = document.querySelector("#aiResponse");
+const aiResponseText = document.querySelector("#aiResponseText");
+const aiContextInput = document.querySelector("#aiContext");
 
 function normalizeTheme(theme) {
   const cards = theme.cards || {};
@@ -422,27 +475,19 @@ function themeLabel(theme) {
 }
 
 function cardText(card) {
+  const orientation = card.orientation || "upright";
+  function pickMeaning(raw) {
+    return raw && typeof raw === "object" ? (raw[orientation] || raw.upright) : raw;
+  }
   const zh = zhCards[card.key];
   if (language === "zh" && zh) {
-    return {
-      name: zh[0],
-      keyword: zh[1],
-      meaning: zh[2]
-    };
+    return { name: zh[0], keyword: zh[1], meaning: pickMeaning(zh[2]) };
   }
   const it = itCards[card.key];
   if (language === "it" && it) {
-    return {
-      name: it[0],
-      keyword: it[1],
-      meaning: it[2]
-    };
+    return { name: it[0], keyword: it[1], meaning: pickMeaning(it[2]) };
   }
-  return {
-    name: card.name,
-    keyword: card.keyword,
-    meaning: card.meaning
-  };
+  return { name: card.name, keyword: card.keyword, meaning: pickMeaning(card.meaning) };
 }
 
 function imageForCard(card) {
@@ -506,6 +551,16 @@ function applyLanguage() {
   document.querySelectorAll("[data-tone]").forEach((button) => {
     button.textContent = text.toneLabels[button.dataset.tone] || button.dataset.tone;
   });
+
+  document.querySelectorAll("[data-feeling]").forEach((button) => {
+    button.textContent = text.aiFeelings?.[button.dataset.feeling] || button.dataset.feeling;
+  });
+
+  document.querySelectorAll("[data-subject]").forEach((button) => {
+    button.textContent = text.aiSubjects?.[button.dataset.subject] || button.dataset.subject;
+  });
+
+  if (aiContextInput) aiContextInput.placeholder = text.aiContextPlaceholder || "";
 
   renderThemeOptions();
   updateThemeModeButton();
@@ -609,8 +664,7 @@ function buildReading(cards) {
   const meanings = cards
     .map((card) => {
       const localized = cardText(card);
-      const advice = text.orientationAdvice[card.orientation] || text.orientationAdvice.upright;
-      return `${localized.meaning} ${advice}`;
+      return localized.meaning;
     })
     .join(" ");
   const first = cardText(cards[0]);
@@ -627,6 +681,7 @@ function drawCards() {
   activeCards = sampleDeck(currentSpread);
   renderCards(activeCards);
   buildReading(activeCards);
+  updateAskButton();
 }
 
 function resetSession() {
@@ -635,10 +690,12 @@ function resetSession() {
   delete cardsStage.dataset.count;
   questionInput.value = "";
   notesInput.value = "";
-  readingText.textContent =
-    translations[language].initialReading;
+  readingText.textContent = translations[language].initialReading;
   brewPrompt.textContent = translations[language].initialBrew;
   agoraNote.textContent = translations[language].initialAgora;
+  aiResponseEl.hidden = true;
+  aiResponseText.textContent = "";
+  updateAskButton();
 }
 
 function currentSummary() {
@@ -672,6 +729,21 @@ async function importTheme(file) {
   renderThemeOptions();
   if (activeCards.length) {
     renderCards(activeCards);
+  }
+}
+
+async function loadLocalConfig() {
+  try {
+    const res = await fetch("config.local.json", { cache: "no-store" });
+    if (!res.ok) return;
+    const cfg = await res.json();
+    if (cfg.apiKey && !localStorage.getItem("philo-api-key")) {
+      localStorage.setItem("philo-api-key", cfg.apiKey);
+      apiKeyInput.value = cfg.apiKey;
+      updateAskButton();
+    }
+  } catch {
+    // no local config present, that's fine
   }
 }
 
@@ -748,9 +820,152 @@ copySummary.addEventListener("click", async () => {
   }, 1200);
 });
 
+function updateAskButton() {
+  const hasKey = !!(localStorage.getItem("philo-api-key") || "").trim();
+  const canAsk = hasKey && activeCards.length > 0;
+  askCardsBtn.disabled = !canAsk;
+  smarterBtn.disabled = !canAsk;
+}
+
+function buildAIPrompt() {
+  const text = translations[language];
+  const question = questionInput.value.trim() || text.emptyQuestion;
+  const spreadName = currentSpread === 1 ? "single card" : `${currentSpread}-card spread`;
+  const positionLabels = text.spreadLabels[currentSpread];
+
+  const cardLines = activeCards.map((card, i) => {
+    const loc = cardText(card);
+    const orient = text[card.orientation] || "upright";
+    return `  ${positionLabels[i]}: ${loc.name} (${orient}) — ${loc.meaning}`;
+  }).join("\n");
+
+  const feelingLine = aiFeeling ? `Emotional state: ${aiFeeling}` : "";
+  const subjectLine = aiSubjects.size ? `Area of focus: ${[...aiSubjects].join(", ")}` : "";
+  const contextLine = aiContextInput.value.trim() ? `Additional context: ${aiContextInput.value.trim()}` : "";
+  const userContext = [feelingLine, subjectLine, contextLine].filter(Boolean).join("\n");
+
+  return `You are a wise tarot reader steeped in the Rider-Waite-Smith tradition. A querent has drawn cards and seeks personal guidance.
+
+QUERENT CONTEXT
+Question: "${question}"
+${userContext || "No additional context provided."}
+
+CARDS DRAWN (${spreadName})
+${cardLines}
+
+Please provide a grounded reading that addresses:
+1. What central theme does this spread reveal about the querent's present moment?
+2. How does each card's position speak to their specific situation?
+3. What tension or opportunity do the cards reveal together?
+4. What blind spot or shadow element should the querent be watchful of?
+5. What one clear action or inner shift do the cards call for right now?
+
+Speak directly to the querent — warm, specific, and grounded in the RWS meanings above. End with a single sentence of clear guidance they can carry forward.`;
+}
+
+const smarterBtn = document.querySelector("#askCardsSmart");
+
+async function callOracle(model, triggerBtn, loadingKey) {
+  const apiKey = (localStorage.getItem("philo-api-key") || "").trim();
+  if (!apiKey || !activeCards.length) return;
+
+  const text = translations[language];
+  askCardsBtn.disabled = true;
+  smarterBtn.disabled = true;
+  triggerBtn.textContent = text.aiLoading;
+  aiResponseEl.hidden = false;
+  aiResponseText.textContent = "";
+  aiResponseText.classList.add("is-loading");
+  aiResponseEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+        "anthropic-dangerous-direct-browser-access": "true"
+      },
+      body: JSON.stringify({
+        model,
+        max_tokens: 1024,
+        messages: [{ role: "user", content: buildAIPrompt() }]
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.json().catch(() => ({}));
+      throw new Error(err.error?.message || `HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    aiResponseText.textContent = data.content?.[0]?.text || "";
+    const header = aiResponseEl.querySelector(".ai-response-header");
+    let modelTag = header.querySelector(".ai-model-tag");
+    if (!modelTag) {
+      modelTag = document.createElement("span");
+      modelTag.className = "ai-model-tag";
+      header.append(modelTag);
+    }
+    modelTag.textContent = model.includes("sonnet") ? "Sonnet 4.6" : "Haiku 4.5";
+  } catch (err) {
+    aiResponseText.textContent = `${text.aiError} (${err.message})`;
+  } finally {
+    aiResponseText.classList.remove("is-loading");
+    askCardsBtn.disabled = false;
+    smarterBtn.disabled = false;
+    askCardsBtn.textContent = text.askCards;
+    smarterBtn.textContent = text.askCardsSmart;
+  }
+}
+
+function askCards() {
+  callOracle("claude-haiku-4-5-20251001", askCardsBtn, "askCards");
+}
+
+function askCardsSmart() {
+  callOracle("claude-sonnet-4-6", smarterBtn, "askCardsSmart");
+}
+
+apiKeyInput.value = localStorage.getItem("philo-api-key") || "";
+apiKeyInput.addEventListener("input", () => {
+  localStorage.setItem("philo-api-key", apiKeyInput.value.trim());
+  updateAskButton();
+});
+
+aiSettingsToggle.addEventListener("click", () => {
+  aiSettingsPanel.hidden = !aiSettingsPanel.hidden;
+});
+
+document.querySelectorAll("[data-feeling]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    aiFeeling = btn.dataset.feeling === aiFeeling ? "" : btn.dataset.feeling;
+    document.querySelectorAll("[data-feeling]").forEach((b) => {
+      b.classList.toggle("is-active", b.dataset.feeling === aiFeeling);
+    });
+  });
+});
+
+document.querySelectorAll("[data-subject]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    if (aiSubjects.has(btn.dataset.subject)) {
+      aiSubjects.delete(btn.dataset.subject);
+      btn.classList.remove("is-active");
+    } else {
+      aiSubjects.add(btn.dataset.subject);
+      btn.classList.add("is-active");
+    }
+  });
+});
+
+askCardsBtn.addEventListener("click", askCards);
+smarterBtn.addEventListener("click", askCardsSmart);
+
 loadThemeRegistry().finally(() => {
   applyThemeMode();
   applyLanguage();
   drawCards();
+  loadLocalConfig();
 });
 registerServiceWorker();
