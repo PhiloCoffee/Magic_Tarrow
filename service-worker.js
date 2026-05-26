@@ -1,4 +1,4 @@
-const CACHE_NAME = "philocoffee-tarot-v2";
+const CACHE_NAME = "philocoffee-tarot-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
