@@ -87,7 +87,7 @@
 
           <section class="reading-output" aria-label="Reading output">
             <article>
-              <span class="mini-label" data-i18n="readingLabel">Reading</span>
+              <span class="mini-label" data-i18n="readingLabel">The Cards</span>
               <p id="readingText">
                 Pick a question, choose a spread, and draw. The studio will connect tarot imagery
                 with coffee, philosophy, and a small action for the next PhiloCoffee gathering.
@@ -105,7 +105,7 @@
 
           <section class="ai-reading-panel" id="aiReadingPanel" aria-label="AI oracle reading">
             <div class="ai-panel-header">
-              <span class="mini-label" data-i18n="aiReadingLabel">AI Reading</span>
+              <span class="mini-label" data-i18n="aiReadingLabel">The Oracle</span>
               <button class="icon-toggle" id="aiSettingsToggle" type="button" title="API key settings">⚙</button>
             </div>
             <div class="ai-settings" id="aiSettings" hidden>
@@ -115,7 +115,7 @@
             </div>
             <div class="ai-inputs">
               <div class="ai-input-row">
-                <span class="control-label" data-i18n="aiFeelingLabel">How are you feeling lately?</span>
+                <span class="control-label" data-i18n="aiFeelingLabel">Your present state</span>
                 <div class="chip-row" id="feelingOptions" role="group">
                   <button class="chip" type="button" data-feeling="great">Great</button>
                   <button class="chip" type="button" data-feeling="good">Good</button>
@@ -125,7 +125,7 @@
                 </div>
               </div>
               <div class="ai-input-row">
-                <span class="control-label" data-i18n="aiSubjectLabel">Area of focus</span>
+                <span class="control-label" data-i18n="aiSubjectLabel">This reading concerns</span>
                 <div class="chip-row" id="subjectOptions" role="group">
                   <button class="chip" type="button" data-subject="work">Work</button>
                   <button class="chip" type="button" data-subject="study">Study</button>
@@ -135,13 +135,13 @@
                 </div>
               </div>
               <div class="ai-input-row">
-                <label for="aiContext" data-i18n="aiContextLabel">Optional context</label>
-                <textarea id="aiContext" rows="2" placeholder="Share what's on your mind..."></textarea>
+                <label for="aiContext" data-i18n="aiContextLabel">What else you carry</label>
+                <textarea id="aiContext" rows="2" placeholder="Anything else pressing on you..."></textarea>
               </div>
             </div>
             <div class="ai-button-row">
-              <button id="askCards" class="primary-action ai-ask-btn" type="button" disabled data-i18n="askCards">Ask the cards</button>
-              <button id="askCardsSmart" class="ghost-action ai-smart-btn" type="button" disabled data-i18n="askCardsSmart">Deeper reading (Sonnet)</button>
+              <button id="askCards" class="primary-action ai-ask-btn" type="button" disabled data-i18n="askCards">A quick read</button>
+              <button id="askCardsSmart" class="ghost-action ai-smart-btn" type="button" disabled data-i18n="askCardsSmart">A deeper read</button>
             </div>
             <div class="ai-response" id="aiResponse" hidden>
               <div class="ai-response-header">

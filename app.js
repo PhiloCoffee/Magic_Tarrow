@@ -160,7 +160,7 @@ const translations = {
     themeModeDark: "Dark",
     heroEyebrow: "Where coffee meets philosophy",
     heroTitle: "Turn a club question into a shared ritual.",
-    readingLabel: "Reading",
+    readingLabel: "The Cards",
     brewLabel: "Brew prompt",
     agoraLabel: "Agora note",
     notesLabel: "Club notes",
@@ -208,20 +208,20 @@ const translations = {
       notes: "Club notes",
       none: "None"
     },
-    aiReadingLabel: "AI Reading",
+    aiReadingLabel: "The Oracle",
     aiKeyLabel: "Anthropic API key",
     aiKeyHint: "Your key is stored only in this browser. Calls go directly to Anthropic.",
-    aiFeelingLabel: "How are you feeling lately?",
-    aiSubjectLabel: "Area of focus",
-    aiContextLabel: "Optional context",
-    aiContextPlaceholder: "Share what's on your mind...",
-    askCards: "Ask the cards",
+    aiFeelingLabel: "Your present state",
+    aiSubjectLabel: "This reading concerns",
+    aiContextLabel: "What else you carry",
+    aiContextPlaceholder: "Anything else pressing on you...",
+    askCards: "A quick read",
     aiResponseLabel: "Oracle reading",
-    aiLoading: "The cards are speaking...",
+    aiLoading: "Reading the spread…",
     aiError: "Could not reach the oracle. Check your API key.",
-    aiFeelings: { great: "Great", good: "Good", neutral: "Neutral", unsettled: "Unsettled", struggling: "Struggling" },
+    aiFeelings: { great: "Light", good: "Open", neutral: "Steady", unsettled: "Stirred", struggling: "Heavy" },
     aiSubjects: { work: "Work", study: "Study", research: "Research", love: "Love", life: "Life" },
-    askCardsSmart: "Deeper reading (Sonnet)"
+    askCardsSmart: "A deeper read"
   },
   zh: {
     appTitle: "\u5854\u7f57\u5de5\u4f5c\u53f0",
@@ -238,7 +238,7 @@ const translations = {
     themeModeDark: "\u6df1\u8272",
     heroEyebrow: "\u5496\u5561\u9047\u5230\u54f2\u5b66\u7684\u5730\u65b9",
     heroTitle: "\u628a\u4e00\u4e2a\u793e\u56e2\u95ee\u9898\uff0c\u53d8\u6210\u4e00\u573a\u5171\u540c\u4eea\u5f0f\u3002",
-    readingLabel: "\u724c\u9762\u89e3\u8bfb",
+    readingLabel: "\u8fd9\u6b21\u7684\u724c",
     brewLabel: "\u51b2\u716e\u63d0\u793a",
     agoraLabel: "\u5e7f\u573a\u5907\u6ce8",
     notesLabel: "\u793e\u56e2\u7b14\u8bb0",
@@ -286,20 +286,20 @@ const translations = {
       notes: "\u793e\u56e2\u7b14\u8bb0",
       none: "\u65e0"
     },
-    aiReadingLabel: "AI \u89e3\u8bfb",
-    aiKeyLabel: "Anthropic API \u5bc6\u9470",
-    aiKeyHint: "\u5bc6\u9470\u4ec5\u5b58\u50a8\u5728\u672c\u5730\u6d4f\u89c8\u5668\u4e2d\uff0c\u8c03\u7528\u76f4\u63a5\u53d1\u5411 Anthropic\u3002",
-    aiFeelingLabel: "\u4f60\u6700\u8fd1\u611f\u89c9\u600e\u4e48\u6837\uff1f",
-    aiSubjectLabel: "\u5173\u6ce8\u9886\u57df",
-    aiContextLabel: "\u53ef\u9009\u80cc\u666f",
-    aiContextPlaceholder: "\u5206\u4eab\u4f60\u73b0\u5728\u5728\u60f3\u4ec0\u4e48\u2026",
-    askCards: "\u8bf7\u6559\u724c\u9635",
+    aiReadingLabel: "\u7075\u611f\u89e3\u8bfb",
+    aiKeyLabel: "Anthropic API \u5bc6\u94a5",
+    aiKeyHint: "\u5bc6\u94a5\u4ec5\u5b58\u50a8\u5728\u672c\u5730\u6d4f\u89c8\u5668\u4e2d\uff0c\u8c03\u7528\u76f4\u63a5\u53d1\u5411 Anthropic\u3002",
+    aiFeelingLabel: "\u6b64\u523b\u7684\u5fc3\u5883",
+    aiSubjectLabel: "\u8fd9\u6b21\u5173\u4e8e",
+    aiContextLabel: "\u8fd8\u60f3\u8bf4\u7684",
+    aiContextPlaceholder: "\u5fc3\u91cc\u8fd8\u538b\u7740\u4ec0\u4e48\uff0c\u90fd\u53ef\u4ee5\u8bf4\u2026",
+    askCards: "\u8f7b\u95ee\u4e00\u58f0",
     aiResponseLabel: "\u795e\u8c15\u89e3\u8bfb",
-    aiLoading: "\u724c\u9635\u6b63\u5728\u5021\u8bc9\u2026",
-    aiError: "\u65e0\u6cd5\u8fde\u63a5\u795e\u8c15\uff0c\u8bf7\u68c0\u67e5 API \u5bc6\u9470\u3002",
-    aiFeelings: { great: "\u5f88\u597d", good: "\u597d", neutral: "\u4e00\u822c", unsettled: "\u4e0d\u5b89", struggling: "\u56f0\u96be" },
+    aiLoading: "\u724c\u6b63\u5728\u5f00\u53e3\u2026\u2026",
+    aiError: "\u65e0\u6cd5\u8fde\u63a5\u795e\u8c15\uff0c\u8bf7\u68c0\u67e5 API \u5bc6\u94a5\u3002",
+    aiFeelings: { great: "\u8f7b\u76c8", good: "\u8212\u5c55", neutral: "\u5e73\u9759", unsettled: "\u6270\u52a8", struggling: "\u6c89\u91cd" },
     aiSubjects: { work: "\u5de5\u4f5c", study: "\u5b66\u4e60", research: "\u7814\u7a76", love: "\u611f\u60c5", life: "\u751f\u6d3b" },
-    askCardsSmart: "\u6df1\u5ea6\u89e3\u8bfb (Sonnet)"
+    askCardsSmart: "\u7ec6\u7ec6\u89e3\u8bfb"
   },
   it: {
     appTitle: "Studio dei Tarocchi",
@@ -316,7 +316,7 @@ const translations = {
     themeModeDark: "Scuro",
     heroEyebrow: "Dove il caff\u00e8 incontra la filosofia",
     heroTitle: "Trasforma una domanda del club in un rito condiviso.",
-    readingLabel: "Lettura",
+    readingLabel: "Le carte",
     brewLabel: "Spunto di infusione",
     agoraLabel: "Nota dell'agora",
     notesLabel: "Note del club",
@@ -364,20 +364,20 @@ const translations = {
       notes: "Note del club",
       none: "Nessuna"
     },
-    aiReadingLabel: "Lettura AI",
+    aiReadingLabel: "L'Oracolo",
     aiKeyLabel: "Chiave API Anthropic",
     aiKeyHint: "La chiave è salvata solo in questo browser. Le chiamate vanno direttamente ad Anthropic.",
-    aiFeelingLabel: "Come ti senti ultimamente?",
-    aiSubjectLabel: "Area di interesse",
-    aiContextLabel: "Contesto opzionale",
-    aiContextPlaceholder: "Condividi cosa hai in mente…",
-    askCards: "Chiedi alle carte",
+    aiFeelingLabel: "Il tuo stato d'animo",
+    aiSubjectLabel: "Questa lettura riguarda",
+    aiContextLabel: "Cos'altro porti con te",
+    aiContextPlaceholder: "Qualcos'altro che ti pesa…",
+    askCards: "Una lettura rapida",
     aiResponseLabel: "Lettura oracolare",
-    aiLoading: "Le carte stanno parlando…",
+    aiLoading: "Leggendo i tarocchi…",
     aiError: "Impossibile raggiungere l'oracolo. Controlla la tua chiave API.",
-    aiFeelings: { great: "Benissimo", good: "Bene", neutral: "Neutro", unsettled: "Inquieto", struggling: "In difficoltà" },
+    aiFeelings: { great: "Leggero", good: "Aperto", neutral: "Stabile", unsettled: "Mosso", struggling: "Pesante" },
     aiSubjects: { work: "Lavoro", study: "Studio", research: "Ricerca", love: "Amore", life: "Vita" },
-    askCardsSmart: "Lettura approfondita (Sonnet)"
+    askCardsSmart: "Una lettura più profonda"
   }
 };
 
@@ -839,28 +839,33 @@ function buildAIPrompt() {
     return `  ${positionLabels[i]}: ${loc.name} (${orient}) — ${loc.meaning}`;
   }).join("\n");
 
-  const feelingLine = aiFeeling ? `Emotional state: ${aiFeeling}` : "";
-  const subjectLine = aiSubjects.size ? `Area of focus: ${[...aiSubjects].join(", ")}` : "";
-  const contextLine = aiContextInput.value.trim() ? `Additional context: ${aiContextInput.value.trim()}` : "";
+  const feelingLine = aiFeeling ? `Present state: ${aiFeeling}` : "";
+  const subjectLine = aiSubjects.size ? `Concerns: ${[...aiSubjects].join(", ")}` : "";
+  const contextLine = aiContextInput.value.trim() ? aiContextInput.value.trim() : "";
   const userContext = [feelingLine, subjectLine, contextLine].filter(Boolean).join("\n");
 
-  return `You are a wise tarot reader steeped in the Rider-Waite-Smith tradition. A querent has drawn cards and seeks personal guidance.
+  const langInstruction = language === "zh"
+    ? "Respond in Chinese (中文)."
+    : language === "it"
+    ? "Respond in Italian (italiano)."
+    : "Respond in English.";
 
-QUERENT CONTEXT
+  return `You are a quiet, perceptive tarot reader. You do not offer advice — you read what the cards reveal.
+
+A querent has brought a question. Sit with it before speaking.
+
 Question: "${question}"
-${userContext || "No additional context provided."}
-
-CARDS DRAWN (${spreadName})
+${userContext ? `\n${userContext}\n` : ""}
+Cards drawn (${spreadName}):
 ${cardLines}
 
-Please provide a grounded reading that addresses:
-1. What central theme does this spread reveal about the querent's present moment?
-2. How does each card's position speak to their specific situation?
-3. What tension or opportunity do the cards reveal together?
-4. What blind spot or shadow element should the querent be watchful of?
-5. What one clear action or inner shift do the cards call for right now?
+Speak directly to this person — use "you", not "the querent". Be precise and unhurried. Let the imagery lead; notice the tension between cards, what wants to surface, what remains unspoken.
 
-Speak directly to the querent — warm, specific, and grounded in the RWS meanings above. End with a single sentence of clear guidance they can carry forward.`;
+Do not use bullet points or numbered lists. Do not explain tarot terminology. Do not prescribe. Let mystery live in the spaces between your sentences.
+
+End with a single line — something they can carry without fully grasping. Something revealed, not concluded.
+
+${langInstruction}`;
 }
 
 const smarterBtn = document.querySelector("#askCardsSmart");
