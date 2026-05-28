@@ -21,6 +21,7 @@ This repo includes a dependency-free interactive website for PhiloCoffee Club:
 - can be installed to a phone home screen as a lightweight PWA
 - uses responsive PhiloCoffee background art with translucent interface panels
 - copies a session summary for club notes
+- AI oracle reading via Anthropic API — two depths (quick / deep), responds in the current UI language
 
 Open `index.html` directly in a browser, or host the folder with GitHub Pages.
 
@@ -152,6 +153,32 @@ python C:\Users\everl\.codex\skills\.system\imagegen\scripts\image_gen.py genera
 ```
 
 The web app automatically uses matching card images from the selected theme. If a card image is missing, it falls back to the built-in symbolic card face.
+
+## AI Oracle Reading
+
+The oracle panel lets a user ask the drawn cards for a personal reading via the Anthropic API.
+
+**Setup:**
+
+1. Get an API key from [console.anthropic.com](https://console.anthropic.com).
+2. Click the ⚙ icon in the Oracle panel and paste the key — it is saved only in the browser's `localStorage`.
+
+For local development, you can also drop a `config.local.json` in the repo root (gitignored):
+
+```json
+{ "apiKey": "sk-ant-..." }
+```
+
+The app loads this key on first visit so you don't have to paste it each time.
+
+**Two reading depths:**
+
+| Button | Model | Best for |
+|--------|-------|----------|
+| 轻问一声 / A quick read | claude-haiku-4-5 | Fast, lightweight read |
+| 细细解读 / A deeper read | claude-sonnet-4-6 | More considered, slower |
+
+The oracle responds in the current UI language (Chinese, English, or Italian).
 
 ## Related Inspiration
 
